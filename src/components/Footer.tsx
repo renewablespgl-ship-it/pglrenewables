@@ -1,4 +1,4 @@
-import { Sun } from "lucide-react";
+import pglLogo from "@/assets/pgl-logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,13 +7,11 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-6">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-hero p-2 rounded-lg">
-              <Sun className="w-10 h-10 text-white" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold">PGL Solar</h3>
-              <p className="text-sm text-white/70">Clean Energy Solutions</p>
-            </div>
+            <img 
+              src={pglLogo} 
+              alt="PGL Solar Renewables Logo" 
+              className="h-20 w-auto"
+            />
           </div>
 
           {/* Contact Info */}

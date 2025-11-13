@@ -1,4 +1,4 @@
-import { Sun } from "lucide-react";
+import pglLogo from "@/assets/pgl-logo.jpg";
 
 const Header = () => {
   return (
@@ -6,13 +6,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-hero p-2 rounded-lg">
-              <Sun className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">PGL Solar</h1>
-              <p className="text-xs text-muted-foreground">Clean Energy Solutions</p>
-            </div>
+            <img 
+              src={pglLogo} 
+              alt="PGL Solar Renewables Logo" 
+              className="h-16 w-auto"
+            />
           </div>
         </div>
       </div>
