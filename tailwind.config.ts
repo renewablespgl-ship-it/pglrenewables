@@ -57,6 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        solar: {
+          green: "hsl(var(--solar-green))",
+          blue: "hsl(var(--solar-blue))",
+          yellow: "hsl(var(--solar-yellow))",
+          dark: "hsl(var(--solar-dark))",
+        },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-contact': 'var(--gradient-contact)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'strong': 'var(--shadow-strong)',
       },
       borderRadius: {
         lg: "var(--radius)",
