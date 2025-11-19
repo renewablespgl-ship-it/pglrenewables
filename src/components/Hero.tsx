@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-solar.jpg";
 
 const Hero = () => {
@@ -52,6 +53,14 @@ const Hero = () => {
             >
               Learn More
             </Button>
+            <Link to="/blog">
+              <Button 
+                size="lg"
+                className="bg-[#FFA500] hover:bg-[#FFA500]/90 text-white text-lg px-6 py-6 rounded-lg transition-all hover:scale-105 shadow-strong"
+              >
+                Read Our Blog
+              </Button>
+            </Link>
           </div>
 
           <button
