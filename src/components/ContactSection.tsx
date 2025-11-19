@@ -22,7 +22,7 @@ const ContactSection = () => {
     {
       name: "Facebook",
       icon: Facebook,
-      action: () => window.open("https://facebook.com/pglsolar", "_blank"),
+      action: () => window.open("https://www.facebook.com/profile.php?id=61583279493428", "_blank"),
       color: "hover:bg-[#1877F2]/10 hover:text-[#1877F2] hover:border-[#1877F2]",
       description: "Follow our updates"
     },
