@@ -3,10 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Home, Building2, Battery, Wrench, Check, ArrowRight, DollarSign } from "lucide-react";
+import { Home, Building2, Store, Wrench, Check, ArrowRight, DollarSign } from "lucide-react";
 import productResidential from "@/assets/product-residential.jpg";
 import productCommercial from "@/assets/product-commercial.jpg";
-import productStorage from "@/assets/product-storage.jpg";
+import productFranchise from "@/assets/product-franchise.jpg";
 import productMaintenance from "@/assets/product-maintenance.jpg";
 
 interface Product {
@@ -84,31 +84,32 @@ const ProductsSection = () => {
       detailedInfo: "Commercial solar installations require specialized expertise in large-scale energy production, structural engineering, and commercial electrical systems. We handle everything from initial feasibility studies and financing options to installation and ongoing maintenance. Our team works closely with your business to minimize disruption while maximizing energy production and cost savings."
     },
     {
-      title: "Battery Storage",
-      description: "Store excess energy for use anytime. Our battery systems provide backup power during outages and maximize your solar investment.",
-      image: productStorage,
-      icon: Battery,
+      title: "Franchise Opportunity",
+      description: "Join the PGL Solar family and build a thriving solar business in your area. We provide comprehensive support, training, and proven systems for success.",
+      image: productFranchise,
+      icon: Store,
       features: [
-        "Energy independence",
-        "Backup power supply",
-        "Peak shaving capability",
-        "10-year warranty",
-        "Scalable capacity"
+        "Proven business model",
+        "Comprehensive training",
+        "Marketing support",
+        "Territory protection",
+        "Ongoing mentorship"
       ],
-      badge: "Energy Freedom",
+      badge: "Business Opportunity",
       badgeColor: "bg-accent",
       pricing: {
-        starting: "$8,500",
-        typical: "$10,000 - $20,000",
+        starting: "$75,000",
+        typical: "$75,000 - $150,000",
         details: [
-          "10-20 kWh capacity options",
-          "Tesla Powerwall & LG Chem certified",
-          "Seamless integration with solar",
-          "Smart energy management",
-          "30% federal tax credit eligible"
+          "Initial franchise fee included",
+          "Complete training program",
+          "Marketing materials & branding",
+          "CRM and business software",
+          "Protected territory rights",
+          "Average ROI: 18-24 months"
         ]
       },
-      detailedInfo: "Battery storage systems provide energy security and maximize your solar investment. Store excess solar energy generated during the day for use at night or during power outages. Our intelligent battery management systems optimize charging and discharging cycles to extend battery life while ensuring you always have power when you need it most."
+      detailedInfo: "PGL Solar is expanding nationwide and seeking motivated entrepreneurs to join our network. As a franchisee, you'll benefit from our established brand, proprietary systems, and comprehensive support. We provide everything you need to succeed: from initial training and marketing materials to ongoing technical support and lead generation. Our proven business model has helped franchisees achieve profitability within 18-24 months. Join us in revolutionizing the solar industry while building a sustainable, profitable business in your community."
     },
     {
       title: "Maintenance & Support",
