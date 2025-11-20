@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-solar.jpg";
+import heroLogo from "@/assets/pgl-hero-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -24,20 +24,22 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Power Your Future with
-            <span className="block bg-gradient-to-r from-solar-navy to-solar-orange bg-clip-text text-transparent">
-              Clean Solar Energy
-            </span>
-          </h1>
+        <div className="max-w-5xl mx-auto space-y-12 animate-fade-in">
+          {/* Large Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src={heroLogo} 
+              alt="PGL Solar - Powering a sustainable future" 
+              className="w-full max-w-3xl h-auto"
+            />
+          </div>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
             Transform your home or business with sustainable solar solutions. 
             Join thousands who've made the switch to renewable energy.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex justify-center items-center pt-8">
             <Button 
               size="lg" 
               onClick={scrollToContact}
@@ -45,22 +47,6 @@ const Hero = () => {
             >
               Get Started Today
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={scrollToContact}
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6"
-            >
-              Learn More
-            </Button>
-            <Link to="/blog">
-              <Button 
-                size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-white text-lg px-6 py-6 rounded-lg transition-all hover:scale-105 shadow-strong"
-              >
-                Read Our Blog
-              </Button>
-            </Link>
           </div>
 
           <button

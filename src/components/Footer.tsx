@@ -1,4 +1,4 @@
-import pglLogo from "@/assets/pgl-logo-new.png";
+import pglLogo from "@/assets/pgl-footer-logo.png";
 import { Facebook, Instagram, Phone, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
