@@ -9,48 +9,48 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 220 61% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 61% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 61% 27%;
 
-    --primary: 142 76% 36%;
+    --primary: 220 61% 27%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 199 89% 48%;
+    --secondary: 20 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 40% 96%;
+    --muted-foreground: 220 20% 50%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 20 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 142 76% 36%;
+    --border: 220 30% 90%;
+    --input: 220 30% 90%;
+    --ring: 220 61% 27%;
 
     --radius: 0.75rem;
     
-    /* Solar theme custom colors */
-    --solar-green: 142 76% 36%;
-    --solar-blue: 199 89% 48%;
-    --solar-yellow: 45 93% 58%;
-    --solar-dark: 215 25% 15%;
+    /* PGL Solar brand colors */
+    --solar-navy: 220 61% 27%;
+    --solar-orange: 20 100% 50%;
+    --solar-light-blue: 220 40% 96%;
+    --solar-dark: 220 61% 20%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(199 89% 48%) 100%);
-    --gradient-contact: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(142 76% 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 61% 27%) 0%, hsl(20 100% 50%) 100%);
+    --gradient-contact: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 40% 96%) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsla(142 76% 36% / 0.1);
-    --shadow-strong: 0 10px 40px hsla(142 76% 36% / 0.2);
+    --shadow-soft: 0 4px 20px hsla(220 61% 27% / 0.1);
+    --shadow-strong: 0 10px 40px hsla(20 100% 50% / 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,36 +73,36 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 25% 8%;
+    --background: 220 61% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 215 25% 12%;
+    --card: 220 61% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 215 25% 12%;
+    --popover: 220 61% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 76% 36%;
+    --primary: 220 61% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 199 89% 48%;
+    --secondary: 20 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 25% 18%;
-    --muted-foreground: 215 10% 65%;
+    --muted: 220 40% 18%;
+    --muted-foreground: 220 20% 65%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 20 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 18%;
-    --input: 215 25% 18%;
-    --ring: 142 76% 36%;
+    --border: 220 40% 18%;
+    --input: 220 40% 18%;
+    --ring: 220 61% 35%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 30%) 0%, hsl(199 89% 40%) 100%);
-    --gradient-contact: linear-gradient(180deg, hsl(215 25% 8%) 0%, hsl(215 25% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 61% 20%) 0%, hsl(20 100% 45%) 100%);
+    --gradient-contact: linear-gradient(180deg, hsl(220 61% 8%) 0%, hsl(220 61% 12%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

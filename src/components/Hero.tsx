@@ -19,7 +19,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-solar-dark/70 via-solar-dark/50 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-solar-navy/70 via-solar-navy/50 to-background"></div>
       </div>
 
       {/* Content */}
@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
             Power Your Future with
-            <span className="block bg-gradient-to-r from-solar-green to-solar-blue bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-solar-navy to-solar-orange bg-clip-text text-transparent">
               Clean Solar Energy
             </span>
           </h1>
@@ -56,7 +56,7 @@ const Hero = () => {
             <Link to="/blog">
               <Button 
                 size="lg"
-                className="bg-[#FFA500] hover:bg-[#FFA500]/90 text-white text-lg px-6 py-6 rounded-lg transition-all hover:scale-105 shadow-strong"
+                className="bg-secondary hover:bg-secondary/90 text-white text-lg px-6 py-6 rounded-lg transition-all hover:scale-105 shadow-strong"
               >
                 Read Our Blog
               </Button>
