@@ -1,9 +1,9 @@
-import pglLogo from "@/assets/pgl-logo.jpg";
+import pglLogo from "@/assets/pgl-logo-new.png";
 import { Facebook, Instagram, Phone, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-solar-dark text-white py-12">
+    <footer className="bg-solar-navy text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center space-y-6">
           {/* Logo */}
@@ -21,7 +21,7 @@ const Footer = () => {
               href="https://www.facebook.com/profile.php?id=61583279493428"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
               aria-label="Visit our Facebook page"
             >
               <Facebook className="h-5 w-5" />
@@ -30,14 +30,14 @@ const Footer = () => {
               href="https://www.instagram.com/pgl__solar/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
               aria-label="Visit our Instagram page"
             >
               <Instagram className="h-5 w-5" />
             </a>
             <a
               href="tel:6303161129"
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
               aria-label="Call us"
             >
               <Phone className="h-5 w-5" />
@@ -46,14 +46,14 @@ const Footer = () => {
               href="https://www.youtube.com/@pglrenewables-323"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
               aria-label="Visit our YouTube channel"
             >
               <Youtube className="h-5 w-5" />
             </a>
             <a
               href="mailto:karthikpagadalaa@gmail.com"
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
               aria-label="Send us an email"
             >
               <Mail className="h-5 w-5" />

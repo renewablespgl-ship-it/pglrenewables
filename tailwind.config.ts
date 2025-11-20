@@ -62,9 +62,9 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         solar: {
-          green: "hsl(var(--solar-green))",
-          blue: "hsl(var(--solar-blue))",
-          yellow: "hsl(var(--solar-yellow))",
+          navy: "hsl(var(--solar-navy))",
+          orange: "hsl(var(--solar-orange))",
+          lightBlue: "hsl(var(--solar-light-blue))",
           dark: "hsl(var(--solar-dark))",
         },
       },

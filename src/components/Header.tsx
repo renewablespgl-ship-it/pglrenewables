@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pglLogo from "@/assets/pgl-logo.jpg";
+import pglLogo from "@/assets/pgl-logo-new.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
