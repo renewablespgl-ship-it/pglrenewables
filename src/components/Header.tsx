@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#000000] border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] border-b border-border/20 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1">
@@ -39,7 +39,7 @@ const Header = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2 text-white hover:text-secondary transition-colors"
+                  className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors"
                   activeClassName="text-secondary font-semibold"
                 >
                   {item.label}
@@ -47,7 +47,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2 text-white hover:text-secondary transition-colors bg-transparent hover:bg-transparent"
+                className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors bg-transparent hover:bg-transparent"
                 variant="ghost"
               >
                 Contact
@@ -58,7 +58,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden text-white hover:text-secondary"
+              className="md:hidden text-solar-navy hover:text-secondary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X /> : <Menu />}
@@ -72,8 +72,8 @@ const Header = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2 text-white hover:text-secondary transition-colors rounded-md hover:bg-white/10"
-                  activeClassName="text-secondary font-semibold bg-white/10"
+                  className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors rounded-md hover:bg-accent"
+                  activeClassName="text-secondary font-semibold bg-accent"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -81,7 +81,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2 text-white hover:text-secondary transition-colors rounded-md hover:bg-white/10 justify-start"
+                className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors rounded-md hover:bg-accent justify-start"
                 variant="ghost"
               >
                 Contact
