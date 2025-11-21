@@ -70,32 +70,20 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Contact Methods - Desktop: horizontal, Mobile: vertical */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* Small Contact Links */}
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
             {contactMethods.map((method) => (
-              <Card 
+              <Button
                 key={method.name}
-                className={`group cursor-pointer transition-all duration-300 hover:shadow-strong border-2 ${method.color}`}
+                variant="outline"
+                size="lg"
                 onClick={method.action}
+                className={`transition-all duration-300 ${method.color}`}
               >
-                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 rounded-full bg-muted group-hover:scale-110 transition-transform duration-300">
-                    <method.icon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">{method.name}</h3>
-                    <p className="text-sm text-muted-foreground">{method.description}</p>
-                  </div>
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="w-full group-hover:bg-current group-hover:text-background transition-colors"
-                  >
-                    Connect
-                  </Button>
-                </CardContent>
-              </Card>
+                <method.icon className="w-5 h-5 mr-2" />
+                {method.name}
+              </Button>
             ))}
           </div>
         </div>
