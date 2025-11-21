@@ -33,7 +33,7 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled ? 'shadow-md' : 'shadow-sm'
-      } py-[14px] md:py-[18px] lg:py-[22px]`}>
+      } py-2 md:py-3 lg:py-3.5`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -84,7 +84,7 @@ const Header = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors rounded-md hover:bg-accent"
+                  className="px-4 py-2 text-solar-navy hover:text-white hover:bg-[#FF6A00] transition-colors rounded-md"
                   activeClassName="text-secondary font-semibold bg-accent"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -93,7 +93,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2 text-solar-navy hover:text-secondary transition-colors rounded-md hover:bg-accent justify-start"
+                className="px-4 py-2 text-solar-navy hover:text-white hover:bg-[#FF6A00] transition-colors rounded-md justify-start"
                 variant="ghost"
               >
                 Contact
