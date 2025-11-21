@@ -1,53 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Facebook, Instagram, Mail, Phone, Sun } from "lucide-react";
-
-interface ContactMethod {
-  name: string;
-  icon: React.ElementType;
-  action: () => void;
-  color: string;
-  description: string;
-}
+import { Sun } from "lucide-react";
+import PartnersCarousel from "./PartnersCarousel";
 
 const ContactSection = () => {
-  const contactMethods: ContactMethod[] = [
-    {
-      name: "WhatsApp",
-      icon: MessageCircle,
-      action: () => window.open("https://wa.me/1234567890", "_blank"),
-      color: "hover:bg-[#25D366]/10 hover:text-[#25D366] hover:border-[#25D366]",
-      description: "Chat with us instantly"
-    },
-    {
-      name: "Facebook",
-      icon: Facebook,
-      action: () => window.open("https://www.facebook.com/profile.php?id=61583279493428", "_blank"),
-      color: "hover:bg-[#1877F2]/10 hover:text-[#1877F2] hover:border-[#1877F2]",
-      description: "Follow our updates"
-    },
-    {
-      name: "Instagram",
-      icon: Instagram,
-      action: () => window.open("https://instagram.com/pglsolar", "_blank"),
-      color: "hover:bg-[#E4405F]/10 hover:text-[#E4405F] hover:border-[#E4405F]",
-      description: "See our projects"
-    },
-    {
-      name: "Email",
-      icon: Mail,
-      action: () => window.open("mailto:info@pglsolar.com", "_blank"),
-      color: "hover:bg-primary/10 hover:text-primary hover:border-primary",
-      description: "Send us a message"
-    },
-    {
-      name: "Phone",
-      icon: Phone,
-      action: () => window.open("tel:+1234567890", "_blank"),
-      color: "hover:bg-secondary/10 hover:text-secondary hover:border-secondary",
-      description: "Call us directly"
-    },
-  ];
 
   return (
     <section id="contact" className="py-20 bg-gradient-contact">
@@ -70,23 +25,8 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Small Contact Links */}
-        <div className="max-w-3xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {contactMethods.map((method) => (
-              <Button
-                key={method.name}
-                variant="outline"
-                size="lg"
-                onClick={method.action}
-                className={`transition-all duration-300 ${method.color}`}
-              >
-                <method.icon className="w-5 h-5 mr-2" />
-                {method.name}
-              </Button>
-            ))}
-          </div>
-        </div>
+        {/* Customer Images Carousel */}
+        <PartnersCarousel />
 
         {/* Additional Info */}
         <div className="mt-16 text-center">

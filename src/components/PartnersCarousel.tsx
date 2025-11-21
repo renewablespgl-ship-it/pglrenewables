@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { Sun, Award, Shield, Zap, Leaf, Battery } from "lucide-react";
 
 const PartnersCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -13,15 +12,16 @@ const PartnersCarousel = () => {
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  const partners = [
-    { icon: Sun, text: "Solar Excellence" },
-    { icon: Award, text: "ISO Certified" },
-    { icon: Shield, text: "25 Year Warranty" },
-    { icon: Zap, text: "High Efficiency" },
-    { icon: Leaf, text: "Eco Friendly" },
-    { icon: Battery, text: "Energy Storage" },
-    { icon: Sun, text: "Premium Quality" },
-    { icon: Award, text: "Industry Leader" },
+  // Placeholder customer images - replace with actual customer photos
+  const customers = [
+    { image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop", name: "Happy Customer 1" },
+    { image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop", name: "Happy Customer 2" },
+    { image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&h=300&fit=crop", name: "Happy Customer 3" },
+    { image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=400&h=300&fit=crop", name: "Happy Customer 4" },
+    { image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=400&h=300&fit=crop", name: "Happy Customer 5" },
+    { image: "https://images.unsplash.com/photo-1564547477850-05d44c7d5dca?w=400&h=300&fit=crop", name: "Happy Customer 6" },
+    { image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&h=300&fit=crop", name: "Happy Customer 7" },
+    { image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop", name: "Happy Customer 8" },
   ];
 
   useEffect(() => {
@@ -44,26 +44,31 @@ const PartnersCarousel = () => {
 
   return (
     <section 
-      className="w-full bg-white py-8 border-t border-border/10"
-      aria-label="Partners and certifications"
+      className="w-full py-12 mb-8"
+      aria-label="Our Happy Customers"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
     >
       <div className="container mx-auto px-4">
+        <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground">
+          Our Happy Customers
+        </h3>
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-4">
-            {partners.map((partner, index) => (
+          <div className="flex gap-6">
+            {customers.map((customer, index) => (
               <div
                 key={index}
-                className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
+                className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_25%]"
               >
-                <div className="flex flex-col items-center justify-center p-6 rounded-xl bg-white border border-border/20 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#FF6A00]/30 h-32">
-                  <partner.icon className="w-10 h-10 text-[#FF6A00] mb-2" />
-                  <p className="text-sm font-semibold text-foreground text-center">
-                    {partner.text}
-                  </p>
+                <div className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#FF6A00]/50">
+                  <img 
+                    src={customer.image} 
+                    alt={customer.name}
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             ))}
