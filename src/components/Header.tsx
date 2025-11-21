@@ -32,17 +32,15 @@ const Header = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
-        isScrolled ? 'shadow-md py-3' : 'shadow-sm py-6'
-      }`}>
+        isScrolled ? 'shadow-md' : 'shadow-sm'
+      } py-[14px] md:py-[18px] lg:py-[22px]`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
                 src={pglLogo} 
                 alt="PGL Solar Renewables Logo" 
-                className={`transition-all duration-300 ${
-                  isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-28'
-                } w-auto object-contain`}
+                className="h-10 md:h-12 lg:h-14 w-auto object-contain transition-all duration-300"
                 loading="eager"
               />
             </div>
