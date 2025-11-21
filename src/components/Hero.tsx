@@ -24,9 +24,9 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        <div className="max-w-5xl mx-auto space-y-12 animate-fade-in">
+      <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
           {/* Large Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-5 md:mb-7">
             <img 
               src={heroLogo} 
               alt="PGL Solar - Powering a sustainable future" 
