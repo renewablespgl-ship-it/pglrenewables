@@ -84,8 +84,8 @@ const Header = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2 text-solar-navy hover:text-white hover:bg-[#FF6A00] transition-colors rounded-md"
-                  activeClassName="text-secondary font-semibold bg-accent"
+                  className="px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium active:bg-secondary/10"
+                  activeClassName="text-secondary font-semibold bg-secondary/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -93,8 +93,8 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2 text-solar-navy hover:text-white hover:bg-[#FF6A00] transition-colors rounded-md justify-start"
-                variant="ghost"
+                className="px-4 py-2.5 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+                variant="default"
               >
                 Contact
               </Button>
