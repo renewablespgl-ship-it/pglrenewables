@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/logo.png" 
+              src="/footer-logo.png" 
               alt="PGL Solar Renewables Logo" 
               className="h-28 w-auto"
             />
