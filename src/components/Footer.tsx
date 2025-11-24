@@ -1,4 +1,3 @@
-import pglLogo from "@/assets/pgl-logo-hexagon.png";
 import { Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src={pglLogo} 
+              src="/logo.png" 
               alt="PGL Solar Renewables Logo" 
               className="h-28 w-auto"
             />

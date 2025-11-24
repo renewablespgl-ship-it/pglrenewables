@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-solar.jpg";
-import heroLogo from "@/assets/pgl-hero-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -28,7 +27,7 @@ const Hero = () => {
           {/* Large Logo */}
           <div className="flex justify-center mb-5 md:mb-7">
             <img 
-              src={heroLogo} 
+              src="/logo.png" 
               alt="PGL Solar - Powering a sustainable future" 
               className="w-full max-w-3xl h-auto"
             />
