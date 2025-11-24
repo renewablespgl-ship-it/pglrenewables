@@ -1,4 +1,4 @@
-import pglLogo from "@/assets/pgl-emblem-redesigned.jpg";
+import pglLogo from "@/assets/pgl-logo-hexagon.png";
 import { Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src={pglLogo} 
               alt="PGL Solar Renewables Logo" 
-              className="h-20 w-auto"
+              className="h-28 w-auto"
             />
           </div>
 
