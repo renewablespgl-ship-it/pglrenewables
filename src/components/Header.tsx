@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import pglLogo from "@/assets/pgl-logo-new.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
@@ -38,9 +37,9 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
-                src={pglLogo} 
+                src="/logo.png" 
                 alt="PGL Solar - Powering a sustainable future" 
-                className="h-10 md:h-12 lg:h-14 w-auto object-contain transition-all duration-300"
+                className="h-12 w-auto md:h-14 object-contain transition-all duration-300"
                 loading="eager"
               />
             </div>
