@@ -1,5 +1,5 @@
-import pglLogo from "@/assets/pgl-footer-logo.png";
-import { Facebook, Instagram, Phone, Youtube, Mail } from "lucide-react";
+import pglLogo from "@/assets/pgl-emblem-redesigned.jpg";
+import { Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -36,11 +36,13 @@ const Footer = () => {
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="tel:6303161129"
+              href="https://www.linkedin.com/company/pgl-solar"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
-              aria-label="Call us"
+              aria-label="Visit our LinkedIn page"
             >
-              <Phone className="h-5 w-5" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a
               href="https://www.youtube.com/@pglrenewables-323"
