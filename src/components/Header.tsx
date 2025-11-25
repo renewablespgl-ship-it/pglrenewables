@@ -39,7 +39,7 @@ const Header = () => {
               <img 
                 src="/logo.png" 
                 alt="PGL Solar - Powering a sustainable future" 
-                className="h-16 w-auto md:h-20 lg:h-20 object-contain transition-all duration-300"
+                className="h-20 w-auto md:h-24 lg:h-28 object-contain transition-all duration-300"
                 loading="eager"
               />
             </div>
