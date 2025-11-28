@@ -32,25 +32,25 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled ? 'shadow-md' : 'shadow-sm'
-      } py-2 md:py-3 lg:py-3.5`}>
+      } py-1.5 md:py-2 lg:py-2`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
                 src="/logo.png" 
                 alt="PGL Solar - Powering a sustainable future" 
-                className="h-16 w-auto md:h-20 lg:h-20 object-contain transition-all duration-300"
+                className="h-20 w-auto md:h-24 lg:h-28 object-contain transition-all duration-300"
                 loading="eager"
               />
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+            <nav className="hidden md:flex items-center gap-0.5 lg:gap-1">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium"
+                  className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
                   activeClassName="text-secondary font-semibold bg-secondary/10"
                 >
                   {item.label}
@@ -58,7 +58,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-5 py-2.5 ml-2 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+                className="px-4 py-2 ml-1.5 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md text-sm lg:text-base"
                 variant="default"
               >
                 Contact
