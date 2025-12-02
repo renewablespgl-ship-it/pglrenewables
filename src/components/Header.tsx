@@ -64,8 +64,8 @@ const Header = () => {
                   >
                     <NavLink
                       to={item.path}
-                      className="px-4 py-2 text-secondary bg-secondary/10 hover:bg-secondary/20 transition-all duration-200 rounded-full font-medium text-sm lg:text-base"
-                      activeClassName="text-secondary font-semibold bg-secondary/20"
+                      className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
+                      activeClassName="text-secondary font-semibold bg-secondary/10"
                     >
                       {item.label}
                     </NavLink>
