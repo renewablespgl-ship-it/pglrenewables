@@ -167,7 +167,8 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <Card 
               key={index}
-              className="group overflow-hidden hover:shadow-strong transition-all duration-300 border-2 cursor-pointer"
+              id={product.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+              className="group overflow-hidden hover:shadow-strong transition-all duration-300 border-2 cursor-pointer scroll-mt-32"
               onClick={() => setSelectedProduct(product)}
             >
               {/* Image */}
