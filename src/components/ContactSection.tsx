@@ -35,8 +35,8 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold mb-4 text-foreground">Why Choose PGL Solar?</h3>
               <div className="grid md:grid-cols-3 gap-6 text-left">
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
-                  <p className="text-muted-foreground">Years of Experience</p>
+                  <div className="text-3xl font-bold text-primary mb-2">25+</div>
+                  <p className="text-muted-foreground">Years of Electrical Contracting Experience</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-secondary mb-2">5000+</div>
