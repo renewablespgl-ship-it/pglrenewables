@@ -55,7 +55,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-0.5 lg:gap-1">
+            <nav className="hidden md:flex items-center gap-3 lg:gap-4">
               {navItems.map((item) => (
                 item.label === "Services" ? (
                   <div
@@ -66,8 +66,8 @@ const Header = () => {
                   >
                     <NavLink
                       to={item.path}
-                      className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
-                      activeClassName="text-secondary font-semibold bg-secondary/10"
+                      className="px-4 py-2 text-secondary bg-secondary/10 hover:bg-secondary/20 transition-all duration-200 rounded-full font-medium text-sm lg:text-base"
+                      activeClassName="text-secondary font-semibold bg-secondary/20"
                     >
                       {item.label}
                     </NavLink>
@@ -90,7 +90,7 @@ const Header = () => {
                   <NavLink
                     key={item.path}
                     to={item.path}
-                    className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
+                    className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
                     activeClassName="text-secondary font-semibold bg-secondary/10"
                   >
                     {item.label}
@@ -99,7 +99,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2 ml-1.5 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md text-sm lg:text-base"
+                className="px-4 py-2 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md text-sm lg:text-base"
                 variant="default"
               >
                 Contact
@@ -119,7 +119,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 flex flex-col gap-2">
+            <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3">
               {navItems.map((item) => (
                 item.label === "Services" ? (
                   <div key={item.path}>
