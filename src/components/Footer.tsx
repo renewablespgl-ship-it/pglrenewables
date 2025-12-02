@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Youtube, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -52,18 +52,11 @@ const Footer = () => {
             >
               <Youtube className="h-5 w-5" />
             </a>
-            <a
-              href="mailto:karthikpagadalaa@gmail.com"
-              className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
-              aria-label="Send us an email"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
           </div>
 
           {/* Contact Info */}
           <div className="text-center space-y-2">
-            <p className="text-white/90">Email: karthikpagadalaa@gmail.com</p>
+            <p className="text-white/90">Email: info@pglsolar.co.in</p>
             <p className="text-white/90">Phone: 6303161129</p>
             <p className="text-white/70 text-sm">Available 24/7 for solar emergencies</p>
           </div>
