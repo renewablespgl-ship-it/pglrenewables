@@ -86,31 +86,31 @@ const ProductsSection = () => {
     },
     {
       title: "Franchise Opportunity",
-      description: "Join the PGL Solar family and build a thriving solar business in your area. We provide comprehensive support, training, and proven systems for success.",
+      description: "NO FEES – JUST WORK & EARN. Be the PGL Power Ranger in Your Area! You only need office space, we provide everything else.",
       image: productFranchise,
       icon: Store,
       features: [
-        "Proven business model",
-        "Comprehensive training",
-        "Marketing support",
-        "Territory protection",
-        "Ongoing mentorship"
+        "ID Card & Certificate",
+        "PGL Branding & Marketing Materials",
+        "Vendor Login & Dashboard",
+        "Installation & Technical Training",
+        "Lead Support through Digital Marketing"
       ],
       badge: "Business Opportunity",
       badgeColor: "bg-accent",
       pricing: {
-        starting: "$75,000",
-        typical: "$75,000 - $150,000",
+        starting: "₹0 Fees",
+        typical: "30KW - 60KW/Month",
         details: [
-          "Initial franchise fee included",
-          "Complete training program",
-          "Marketing materials & branding",
-          "CRM and business software",
-          "Protected territory rights",
-          "Average ROI: 18-24 months"
+          "NO Franchise Fees - Just Start Working",
+          "Brochures / Uniform / Visiting Cards Provided",
+          "NO Licence Required – Use Our Company Licence",
+          "Subsidy & Documentation Support Included",
+          "Earnings per 3KW/5KW installation are FULLY YOURS",
+          "No Commission System – FULL OWN BUSINESS"
         ]
       },
-      detailedInfo: "PGL Solar is expanding nationwide and seeking motivated entrepreneurs to join our network. As a franchisee, you'll benefit from our established brand, proprietary systems, and comprehensive support. We provide everything you need to succeed: from initial training and marketing materials to ongoing technical support and lead generation. Our proven business model has helped franchisees achieve profitability within 18-24 months. Join us in revolutionizing the solar industry while building a sustainable, profitable business in your community."
+      detailedInfo: "🚀 Join PGL Solar with ZERO investment in franchise fees! We focus on all districts in Andhra Pradesh and you become the PGL Power Ranger in your area. Expected business target: 30KW – 60KW per month on average. Unlike traditional franchises, there's no commission system – all earnings from your 3KW/5KW installations are FULLY YOURS. You only need office space, and PGL Solar provides everything: ID card, certificate, complete branding, marketing materials, vendor dashboard, training, leads through digital marketing, and full subsidy documentation support. No licence required – use our company licence! 💥 Be the PGL Power Ranger in Your Area!"
     },
     {
       title: "Maintenance & Support",
