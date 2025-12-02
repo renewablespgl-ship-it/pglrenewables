@@ -45,14 +45,12 @@ const Header = () => {
       } py-0 md:py-0.5 lg:py-0.5`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <img 
-                src="/logo.png" 
-                alt="PGL Solar - Powering a sustainable future" 
-                className="h-24 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300"
-                loading="eager"
-              />
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="PGL Solar - Powering a sustainable future" 
+              className="h-24 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300"
+              loading="eager"
+            />
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-3 lg:gap-4">
