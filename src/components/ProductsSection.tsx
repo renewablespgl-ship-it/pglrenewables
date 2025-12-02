@@ -59,30 +59,31 @@ const ProductsSection = () => {
     },
     {
       title: "Commercial Solar",
-      description: "Power your business with sustainable energy solutions. Reduce operational costs and demonstrate your commitment to environmental responsibility.",
+      description: "360° Solar Solution for businesses - from 6KW to Megawatts. Power schools, hospitals, factories, offices, and more with sustainable energy.",
       image: productCommercial,
       icon: Building2,
       features: [
-        "Large-scale installations",
-        "ROI analysis included",
-        "Tax incentive assistance",
-        "Fleet monitoring system",
-        "Dedicated support team"
+        "FREE Shadow Analysis + 3D Structural Report",
+        "FREE Bill Analysis & ROI Report",
+        "1-Year FREE AMC (Service & Maintenance)",
+        "Solar Insurance Available (Optional)",
+        "Capacity: 6KW to Megawatts"
       ],
       badge: "For Business",
       badgeColor: "bg-secondary",
       pricing: {
-        starting: "$50,000",
-        typical: "$75,000 - $500,000+",
+        starting: "₹4.50 Lakh",
+        typical: "₹4.50L - Multiple Crores",
         details: [
-          "Scalable from 25 kW to multi-MW",
-          "Turnkey project management",
-          "Commercial tax benefits (ITC & MACRS)",
-          "ROI typically 3-5 years",
-          "Reduce operating costs by 50-75%"
+          "Scalable from 6KW to Megawatts",
+          "ROI: 2 to 3.5 Years",
+          "1-Year FREE AMC Included",
+          "Commercial tax benefits & subsidies",
+          "Reduce operating costs by 60-80%",
+          "Solar Insurance Available (Optional)"
         ]
       },
-      detailedInfo: "Commercial solar installations require specialized expertise in large-scale energy production, structural engineering, and commercial electrical systems. We handle everything from initial feasibility studies and financing options to installation and ongoing maintenance. Our team works closely with your business to minimize disruption while maximizing energy production and cost savings."
+      detailedInfo: "🏭 Complete 360° Solar Solution for Commercial & Industrial needs. We serve Schools & Colleges 🏫, Hospitals & Clinics 🏥, Shops & Restaurants 🏬, Factories & Industries 🏭, Corporate Offices 🏢, and Cold Storages 🏪. Our comprehensive service includes FREE Shadow Analysis with 3D Structural Report, FREE Bill Analysis & ROI Report showing 2 to 3.5 years payback period. Every installation comes with 1-Year FREE AMC covering service and maintenance. Solar Insurance available as optional coverage. From 6KW systems to multi-megawatt installations, we handle turnkey project management with dedicated engineering and support teams."
     },
     {
       title: "Franchise Opportunity",
