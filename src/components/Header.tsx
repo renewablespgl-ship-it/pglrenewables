@@ -8,6 +8,8 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +31,13 @@ const Header = () => {
     setMobileMenuOpen(false);
   };
 
+  const servicesSubmenu = [
+    { label: "Residential", path: "/#products" },
+    { label: "Commercial", path: "/#products" },
+    { label: "Industrial", path: "/#products" },
+    { label: "Franchise", path: "/#products" },
+  ];
+
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
@@ -48,14 +57,45 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-0.5 lg:gap-1">
               {navItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
-                  activeClassName="text-secondary font-semibold bg-secondary/10"
-                >
-                  {item.label}
-                </NavLink>
+                item.label === "Services" ? (
+                  <div
+                    key={item.path}
+                    className="relative"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <NavLink
+                      to={item.path}
+                      className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
+                      activeClassName="text-secondary font-semibold bg-secondary/10"
+                    >
+                      {item.label}
+                    </NavLink>
+                    {servicesDropdownOpen && (
+                      <div className="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        {servicesSubmenu.map((subItem) => (
+                          <NavLink
+                            key={subItem.path + subItem.label}
+                            to={subItem.path}
+                            className="block px-4 py-2.5 text-solar-navy hover:text-secondary hover:bg-secondary/5 transition-all duration-200 font-medium text-sm"
+                            onClick={() => setServicesDropdownOpen(false)}
+                          >
+                            {subItem.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className="px-3.5 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
+                    activeClassName="text-secondary font-semibold bg-secondary/10"
+                  >
+                    {item.label}
+                  </NavLink>
+                )
               ))}
               <Button
                 onClick={handleContactClick}
@@ -81,15 +121,43 @@ const Header = () => {
           {mobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 flex flex-col gap-2">
               {navItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className="px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium active:bg-secondary/10"
-                  activeClassName="text-secondary font-semibold bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
+                item.label === "Services" ? (
+                  <div key={item.path}>
+                    <button
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      className="w-full text-left px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium"
+                    >
+                      {item.label}
+                    </button>
+                    {mobileServicesOpen && (
+                      <div className="ml-4 mt-1 flex flex-col gap-1 animate-in slide-in-from-top-2 duration-200">
+                        {servicesSubmenu.map((subItem) => (
+                          <NavLink
+                            key={subItem.path + subItem.label}
+                            to={subItem.path}
+                            className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                          >
+                            {subItem.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className="px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium active:bg-secondary/10"
+                    activeClassName="text-secondary font-semibold bg-secondary/10"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                )
               ))}
               <Button
                 onClick={handleContactClick}
