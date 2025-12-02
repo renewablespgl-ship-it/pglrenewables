@@ -32,14 +32,14 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled ? 'shadow-md' : 'shadow-sm'
-      } py-1.5 md:py-2 lg:py-2`}>
+      } py-1 md:py-1.5 lg:py-1.5`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
                 src="/logo.png" 
                 alt="PGL Solar - Powering a sustainable future" 
-                className="h-20 w-auto md:h-24 lg:h-28 object-contain transition-all duration-300"
+                className="h-24 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300"
                 loading="eager"
               />
             </div>
