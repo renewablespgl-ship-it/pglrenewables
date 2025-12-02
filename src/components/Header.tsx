@@ -44,7 +44,7 @@ const Header = () => {
         isScrolled ? 'shadow-md' : 'shadow-sm'
       } py-0`}>
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between py-1">
             <img 
               src="/logo.png" 
               alt="PGL Solar - Powering a sustainable future" 
