@@ -32,10 +32,10 @@ const Header = () => {
   };
 
   const servicesSubmenu = [
-    { label: "Residential", path: "/#products" },
-    { label: "Commercial", path: "/#products" },
-    { label: "Industrial", path: "/#products" },
-    { label: "Franchise", path: "/#products" },
+    { label: "RESIDENTIAL", path: "/#products" },
+    { label: "COMMERCIAL", path: "/#products" },
+    { label: "INDUSTRIAL", path: "/#products" },
+    { label: "FRANCHISE", path: "/#products" },
   ];
 
   return (
