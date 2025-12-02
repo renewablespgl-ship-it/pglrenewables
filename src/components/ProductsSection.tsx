@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Home, Building2, Store, Wrench, Check, ArrowRight, DollarSign } from "lucide-react";
+import { Home, Building2, Store, Wrench, Check, ArrowRight } from "lucide-react";
 import productResidential from "@/assets/product-residential.jpg";
 import productCommercial from "@/assets/product-commercial.jpg";
 import productFranchise from "@/assets/product-franchise.jpg";
@@ -274,7 +274,6 @@ const ProductsSection = () => {
                   {/* Pricing Section */}
                   <div className="bg-muted/50 p-6 rounded-lg border-2 border-border">
                     <div className="flex items-center gap-2 mb-4">
-                      <DollarSign className="w-5 h-5 text-primary" />
                       <h3 className="text-xl font-bold text-foreground">Pricing & Investment</h3>
                     </div>
                     
