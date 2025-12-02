@@ -31,30 +31,31 @@ const ProductsSection = () => {
   const products: Product[] = [
     {
       title: "Residential Solar",
-      description: "Transform your home with clean, renewable energy. Our residential solar solutions reduce your electricity bills while increasing your property value.",
+      description: "Your Own PGL Power Station - Transform your home into an energy-generating powerhouse. Reduce your electricity bill from ₹2,500 to just ₹100-200/month!",
       image: productResidential,
       icon: Home,
       features: [
-        "Custom system design",
-        "Premium solar panels",
-        "25-year warranty",
-        "Smart monitoring app",
-        "Professional installation"
+        "FREE Site Survey",
+        "FREE Documentation & Subsidy Process",
+        "Monitoring Mobile App",
+        "Loan & EMI Facility (All Government Banks)",
+        "Installation in 1 Day After Payment"
       ],
       badge: "Most Popular",
       badgeColor: "bg-primary",
       pricing: {
-        starting: "$12,000",
-        typical: "$15,000 - $25,000",
+        starting: "₹1.90 Lakh",
+        typical: "₹1.90L - ₹3.00L",
         details: [
-          "Average 5-7 kW system",
-          "Includes installation & permits",
-          "Federal tax credit eligible (30%)",
-          "Typical payback: 6-8 years",
-          "Save up to $1,500/year on electricity"
+          "3KW: ₹1.90 Lakh (Normal ₹2.10L) - Subsidy Available",
+          "4KW: ₹2.40 Lakh (Normal ₹2.60L) - Subsidy Available",
+          "5KW: ₹3.00 Lakh (Normal ₹3.20L) - Subsidy Available",
+          "ROI: 3.5 to 5 Years",
+          "After ROI: FREE ELECTRICITY FOR LIFE",
+          "EMI Available on All Systems"
         ]
       },
-      detailedInfo: "Our residential solar systems are designed specifically for your home's energy needs. We conduct a thorough site assessment, considering your roof orientation, shading, and energy consumption patterns. Each system comes with tier-1 solar panels that maintain 85% efficiency after 25 years, coupled with premium inverters for optimal energy conversion."
+      detailedInfo: "💡 Example: If your home electricity bill is ₹2,500, installing a 3KW PGL Solar System reduces it to only ₹100-200/month. With ROI in just 3.5 to 5 years, you'll enjoy FREE ELECTRICITY FOR LIFE after that! From today your home becomes a PGL Power Station. Prathi Illu – PGL Solar Illu! We handle everything end-to-end including site survey, installation, subsidy documentation, monitoring app setup, and loan facility through all government banks."
     },
     {
       title: "Commercial Solar",
