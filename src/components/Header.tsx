@@ -32,10 +32,10 @@ const Header = () => {
   };
 
   const servicesSubmenu = [
-    { label: "RESIDENTIAL", path: "/#products" },
-    { label: "COMMERCIAL", path: "/#products" },
-    { label: "INDUSTRIAL", path: "/#products" },
-    { label: "FRANCHISE", path: "/#products" },
+    { label: "Residential Solar", path: "/#products" },
+    { label: "Commercial Solar", path: "/#products" },
+    { label: "Industrial Solar", path: "/#products" },
+    { label: "Franchise Oppurtunity", path: "/#products" },
   ];
 
   return (
