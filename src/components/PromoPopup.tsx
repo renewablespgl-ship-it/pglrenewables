@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { X, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactDialog } from "./ContactDialog";
 
@@ -62,15 +62,14 @@ export const PromoPopup = () => {
             {/* Decorative Top Bar */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-t-2xl" />
 
-            {/* Icon/Badge */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-              <svg
-                className="w-8 h-8 sm:w-10 sm:h-10 text-secondary"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
+            {/* Animated Sun Icon */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative">
+              <Sun 
+                className="w-8 h-8 sm:w-10 sm:h-10 text-secondary animate-spin"
+                style={{ animationDuration: '20s' }}
+                strokeWidth={2.5}
+              />
+              <div className="absolute inset-0 rounded-full bg-secondary/20 animate-ping" style={{ animationDuration: '3s' }} />
             </div>
 
             {/* Heading */}
