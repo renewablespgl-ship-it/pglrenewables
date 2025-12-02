@@ -32,7 +32,7 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         isScrolled ? 'shadow-md' : 'shadow-sm'
-      } py-0.5 md:py-1 lg:py-1`}>
+      } py-0 md:py-0.5 lg:py-0.5`}>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
