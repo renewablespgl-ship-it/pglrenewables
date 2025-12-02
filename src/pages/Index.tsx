@@ -12,33 +12,33 @@ const Index = () => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a[href^="#"]');
       if (!anchor) return;
-      
-      const href = anchor.getAttribute('href');
-      if (!href || href === '#') return;
-      
+
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") return;
+
       const targetId = href.slice(1);
       const targetElement = document.getElementById(targetId);
       if (!targetElement) return;
-      
+
       e.preventDefault();
-      const header = document.querySelector('header');
+      const header = document.querySelector("header");
       const headerHeight = header?.offsetHeight || 100;
       const targetPosition = targetElement.offsetTop - headerHeight - 16;
-      
+
       window.scrollTo({
         top: targetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     };
 
-    document.addEventListener('click', handleAnchorClick);
-    return () => document.removeEventListener('click', handleAnchorClick);
+    document.addEventListener("click", handleAnchorClick);
+    return () => document.removeEventListener("click", handleAnchorClick);
   }, []);
 
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
+      <main className="pt-[60px] md:pt-[70px] lg:pt-[80px]">
         <Hero />
         <ProductsSection />
         <ContactSection />
