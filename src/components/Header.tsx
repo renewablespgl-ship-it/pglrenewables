@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { ContactDialog } from "./ContactDialog";
 
@@ -59,14 +59,49 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-3 lg:gap-4">
               {navItems.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
-                  activeClassName="text-secondary font-semibold bg-secondary/10"
-                >
-                  {item.label}
-                </NavLink>
+                item.label === "Services" ? (
+                  <div
+                    key={item.path}
+                    className="relative"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <button
+                      className={`px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base inline-flex items-center gap-1 ${
+                        servicesDropdownOpen ? 'text-secondary bg-secondary/5' : ''
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                    {servicesDropdownOpen && (
+                      <div className="absolute left-0 top-full mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        {servicesSubmenu.map((subItem) => (
+                          <NavLink
+                            key={subItem.path + subItem.label}
+                            to={subItem.path}
+                            className="block px-4 py-3 text-solar-navy hover:text-secondary hover:bg-secondary/5 transition-all duration-200 font-medium text-sm border-l-2 border-transparent hover:border-secondary mx-2 rounded-r-lg"
+                            onClick={() => setServicesDropdownOpen(false)}
+                          >
+                            {subItem.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm lg:text-base"
+                    activeClassName="text-secondary font-semibold bg-secondary/10"
+                  >
+                    {item.label}
+                  </NavLink>
+                )
               ))}
               <Button
                 onClick={handleContactClick}
