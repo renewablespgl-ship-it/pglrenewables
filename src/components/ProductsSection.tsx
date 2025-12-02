@@ -119,26 +119,28 @@ const ProductsSection = () => {
       image: productMaintenance,
       icon: Wrench,
       features: [
-        "Regular inspections",
-        "Performance optimization",
-        "Quick repairs",
-        "System cleaning",
-        "24/7 support hotline"
+        "Electricity Bill Analysis",
+        "Solar ROI Report",
+        "Shadow Analysis",
+        "3D Structural Design",
+        "Subsidy Filing & Paperwork",
+        "After-Service AMC & Insurance"
       ],
       badge: "Peace of Mind",
       badgeColor: "bg-primary",
       pricing: {
-        starting: "$200/year",
-        typical: "$300 - $800/year",
+        starting: "FREE",
+        typical: "FREE Services",
         details: [
-          "Annual system inspection",
-          "Panel cleaning (2x per year)",
-          "Performance monitoring",
-          "Priority repair service",
-          "Inverter & electrical checks"
+          "FREE Electricity Bill Analysis",
+          "FREE Solar ROI Report",
+          "FREE Shadow Analysis",
+          "FREE 3D Structural Design",
+          "FREE Subsidy Filing & Paperwork",
+          "FREE After-Service AMC & Insurance"
         ]
       },
-      detailedInfo: "Regular maintenance is essential to keep your solar system operating at peak efficiency. Our comprehensive service plans include bi-annual cleaning, electrical testing, inverter inspections, and performance analysis. We proactively identify and resolve issues before they impact your energy production, ensuring your system delivers maximum return on investment year after year."
+      detailedInfo: "📝 FREE SERVICES WE PROVIDE: We believe in transparency and comprehensive support. Our FREE services include complete Electricity Bill Analysis to understand your energy needs, detailed Solar ROI Report showing your investment returns, professional Shadow Analysis for optimal panel placement, precise 3D Structural Design for your installation, complete Subsidy Filing & Paperwork assistance, and After-Service AMC & Insurance coverage. These services ensure you get maximum value and peace of mind from your solar investment."
     }
   ];
 
