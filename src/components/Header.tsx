@@ -48,7 +48,11 @@ const Header = () => {
             <img 
               src="/logo.png" 
               alt="PGL Solar - Powering a sustainable future" 
-              className="h-24 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300"
+              className={`w-auto object-contain transition-all duration-300 ${
+                isScrolled 
+                  ? 'h-20 md:h-22 lg:h-24' 
+                  : 'h-24 md:h-28 lg:h-32'
+              }`}
               loading="eager"
             />
 
