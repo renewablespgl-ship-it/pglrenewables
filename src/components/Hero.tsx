@@ -22,10 +22,10 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pb-32 text-center">
-      <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 pb-20 text-center">
+      <div className="max-w-5xl mx-auto space-y-4 animate-fade-in">
           {/* Large Logo */}
-          <div className="flex justify-center mb-5 md:mb-7">
+          <div className="flex justify-center mb-3 md:mb-4">
             <img 
               src="/logo.png" 
               alt="PGL Solar - Powering a sustainable future" 
@@ -38,7 +38,7 @@ const Hero = () => {
             Join thousands who've made the switch to renewable energy.
           </p>
 
-          <div className="flex justify-center items-center pt-8">
+          <div className="flex justify-center items-center pt-4">
             <Button 
               size="lg" 
               onClick={scrollToContact}
@@ -50,7 +50,7 @@ const Hero = () => {
 
           <button
             onClick={scrollToContact}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
             aria-label="Scroll to contact"
           >
             <ArrowDown className="w-8 h-8 text-white" />
