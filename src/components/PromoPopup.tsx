@@ -42,7 +42,7 @@ export const PromoPopup = () => {
         onClick={handleOverlayClick}
       >
         {/* Modal */}
-        <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px] animate-in zoom-in-95 fade-in duration-300">
+        <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px] animate-in slide-in-from-bottom-full sm:slide-in-from-bottom-0 sm:zoom-in-95 fade-in duration-300">
           {/* Close Button */}
           <button
             onClick={handleClose}
