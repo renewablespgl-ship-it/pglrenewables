@@ -69,6 +69,48 @@ const About = () => {
                 </div>
               </div>
 
+              {/* Certifications Section */}
+              <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 lg:p-12 mb-8 md:mb-10 border border-secondary/10">
+                <h2 className="text-2xl md:text-3xl font-bold text-solar-navy mb-8 flex items-center gap-3">
+                  <span className="text-3xl">📜</span>
+                  Certifications & Legal Compliance
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
+                  {[
+                    "APCPDCL Special Class Electrical Contractor Licence",
+                    "MSME Registered",
+                    "ISO Certified",
+                    "Udyam & Startup India Registered",
+                    "Eastern Power Vendor Licence",
+                    "GST Compliant"
+                  ].map((cert, index) => (
+                    <div key={index} className="flex items-center gap-3 bg-secondary/5 rounded-lg p-4 border border-secondary/20">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <span className="text-solar-navy font-medium">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Tax Benefits */}
+                <div className="bg-gradient-to-r from-solar-navy/5 to-secondary/5 rounded-xl p-6 border border-secondary/20">
+                  <h3 className="text-lg md:text-xl font-semibold text-solar-navy mb-4 flex items-center gap-2">
+                    <span>💼</span> Tax Benefits
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      "Depreciation under Income Tax Section 32 (for businesses)",
+                      "Loans from all Nationalised Banks",
+                      "Solar Insurance available at additional cost"
+                    ].map((benefit, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                        <span className="text-solar-navy/90">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Brands Section */}
               <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 lg:p-12 border border-secondary/10">
                 <h2 className="text-2xl md:text-3xl font-bold text-solar-navy mb-8 flex items-center gap-3">
