@@ -32,7 +32,9 @@ const Hero = () => {
             <img 
               src="/logo.png" 
               alt="PGL Solar - Powering a sustainable future" 
-              className="w-full max-w-3xl h-auto"
+              className="w-full max-w-3xl h-auto aspect-square"
+              width={768}
+              height={768}
             />
           </div>
           
