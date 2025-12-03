@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import customer1 from "@/assets/customer-1.jpg";
+import customer2 from "@/assets/customer-2.jpg";
+import customer3 from "@/assets/customer-3.jpg";
+import customer4 from "@/assets/customer-4.jpg";
+import customer5 from "@/assets/customer-5.jpg";
+import customer6 from "@/assets/customer-6.jpg";
 
 const PartnersCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -12,16 +18,13 @@ const PartnersCarousel = () => {
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Placeholder customer images - replace with actual customer photos
   const customers = [
-    { image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop", name: "Happy Customer 1" },
-    { image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop", name: "Happy Customer 2" },
-    { image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&h=300&fit=crop", name: "Happy Customer 3" },
-    { image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=400&h=300&fit=crop", name: "Happy Customer 4" },
-    { image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=400&h=300&fit=crop", name: "Happy Customer 5" },
-    { image: "https://images.unsplash.com/photo-1564547477850-05d44c7d5dca?w=400&h=300&fit=crop", name: "Happy Customer 6" },
-    { image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&h=300&fit=crop", name: "Happy Customer 7" },
-    { image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop", name: "Happy Customer 8" },
+    { image: customer1, name: "P. Indraja - Solar Installation" },
+    { image: customer2, name: "N. Anatharavamma - Solar Installation" },
+    { image: customer3, name: "Customer in Nandigama" },
+    { image: customer4, name: "Customer in Gudivada" },
+    { image: customer5, name: "Customer in Chandralapadu" },
+    { image: customer6, name: "Customer in Muppalla" },
   ];
 
   useEffect(() => {
