@@ -53,6 +53,8 @@ const Header = () => {
                   ? 'h-20 md:h-22 lg:h-24' 
                   : 'h-24 md:h-28 lg:h-32'
               }`}
+              width={128}
+              height={128}
               loading="eager"
             />
 
