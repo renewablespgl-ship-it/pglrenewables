@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-solar.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -16,7 +15,7 @@ const Hero = () => {
           loop
           muted
           playsInline
-          poster={heroImage}
+          poster="/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
           // @ts-ignore - fetchpriority is valid but not in React types yet
           fetchpriority="high"
