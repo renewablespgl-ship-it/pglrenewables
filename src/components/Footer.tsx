@@ -11,6 +11,8 @@ const Footer = () => {
               src="/footer-logo.png" 
               alt="PGL Solar Renewables Logo" 
               className="h-28 w-auto"
+              width={112}
+              height={112}
             />
           </div>
 
