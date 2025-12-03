@@ -81,7 +81,7 @@ export const PromoPopup = () => {
             {/* Primary CTA */}
             <Button
               onClick={handleBookConsultation}
-              className="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mb-3 sm:mb-4"
+              className="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-5 sm:py-5 md:py-6 text-base sm:text-base md:text-lg rounded-xl sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mb-3 sm:mb-4"
             >
               Book Free Solar Consultation
             </Button>
