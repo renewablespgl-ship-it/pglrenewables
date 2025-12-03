@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { PromoPopup } from "@/components/PromoPopup";
+
+// Lazy load PromoPopup since it only appears after 1 second delay
+const PromoPopup = lazy(() => import("@/components/PromoPopup").then(m => ({ default: m.PromoPopup })));
 
 const Index = () => {
   useEffect(() => {
@@ -45,7 +47,9 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
-      <PromoPopup />
+      <Suspense fallback={null}>
+        <PromoPopup />
+      </Suspense>
     </div>
   );
 };
