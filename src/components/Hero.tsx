@@ -18,6 +18,8 @@ const Hero = () => {
           playsInline
           poster={heroImage}
           className="absolute inset-0 w-full h-full object-cover"
+          // @ts-ignore - fetchpriority is valid but not in React types yet
+          fetchpriority="high"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
