@@ -11,7 +11,7 @@ import { toast } from "@/hooks/use-toast";
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
   mobile: z.string().trim().min(10, "Mobile number must be at least 10 digits").max(15, "Mobile number must be less than 15 digits"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -27,7 +27,10 @@ export const ContactDialog = ({ open, onOpenChange }: ContactDialogProps) => {
   });
 
   const onSubmit = (data: ContactFormData) => {
-    const message = `Hello! I want to connect.%0AName: ${encodeURIComponent(data.name)}%0AMobile: ${encodeURIComponent(data.mobile)}%0AEmail: ${encodeURIComponent(data.email)}`;
+    let message = `Hello! I want to connect.%0AName: ${encodeURIComponent(data.name)}%0AMobile: ${encodeURIComponent(data.mobile)}`;
+    if (data.email) {
+      message += `%0AEmail: ${encodeURIComponent(data.email)}`;
+    }
     const whatsappUrl = `https://wa.me/916303161129?text=${message}`;
     
     window.open(whatsappUrl, "_blank");
@@ -74,7 +77,7 @@ export const ContactDialog = ({ open, onOpenChange }: ContactDialogProps) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email *</Label>
+            <Label htmlFor="email">Email (Optional)</Label>
             <Input
               id="email"
               type="email"
