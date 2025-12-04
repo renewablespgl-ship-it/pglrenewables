@@ -33,11 +33,20 @@ const Header = () => {
   };
 
   const servicesSubmenu = [
-    { label: "Residential Solar", path: "/#residential-solar" },
-    { label: "Commercial Solar", path: "/#commercial-solar" },
-    { label: "Maintenance & Support", path: "/#maintenance-and-support" },
-    { label: "Franchise Opportunity", path: "/#franchise-opportunity" },
+    { label: "Residential Solar", id: "residential-solar" },
+    { label: "Commercial Solar", id: "commercial-solar" },
+    { label: "Maintenance & Support", id: "maintenance-and-support" },
+    { label: "Franchise Opportunity", id: "franchise-opportunity" },
   ];
+
+  const scrollToProduct = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerHeight = 100;
+      const targetPosition = element.offsetTop - headerHeight - 16;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -83,14 +92,16 @@ const Header = () => {
                     {servicesDropdownOpen && (
                       <div className="absolute left-0 top-full mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                         {servicesSubmenu.map((subItem) => (
-                          <NavLink
-                            key={subItem.path + subItem.label}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-solar-navy hover:text-secondary hover:bg-secondary/5 transition-all duration-200 font-medium text-sm border-l-2 border-transparent hover:border-secondary mx-2 rounded-r-lg"
-                            onClick={() => setServicesDropdownOpen(false)}
+                          <button
+                            key={subItem.id + subItem.label}
+                            onClick={() => {
+                              setServicesDropdownOpen(false);
+                              scrollToProduct(subItem.id);
+                            }}
+                            className="block w-full text-left px-4 py-3 text-solar-navy hover:text-secondary hover:bg-secondary/5 transition-all duration-200 font-medium text-sm border-l-2 border-transparent hover:border-secondary mx-2 rounded-r-lg"
                           >
                             {subItem.label}
-                          </NavLink>
+                          </button>
                         ))}
                       </div>
                     )}
@@ -141,17 +152,17 @@ const Header = () => {
                     {mobileServicesOpen && (
                       <div className="ml-4 mt-1 flex flex-col gap-1 animate-in slide-in-from-top-2 duration-200">
                         {servicesSubmenu.map((subItem) => (
-                          <NavLink
-                            key={subItem.path + subItem.label}
-                            to={subItem.path}
-                            className="px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm"
+                          <button
+                            key={subItem.id + subItem.label}
                             onClick={() => {
                               setMobileMenuOpen(false);
                               setMobileServicesOpen(false);
+                              scrollToProduct(subItem.id);
                             }}
+                            className="text-left px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm"
                           >
                             {subItem.label}
-                          </NavLink>
+                          </button>
                         ))}
                       </div>
                     )}
