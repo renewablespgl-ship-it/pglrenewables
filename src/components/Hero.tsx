@@ -29,14 +29,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pb-20 text-center">
       <div className="max-w-5xl mx-auto space-y-2 animate-fade-in">
           {/* Large Logo */}
-          <div className="flex justify-center mb-1 md:mb-2">
-            <div className="w-full max-w-3xl aspect-square">
+          <div className="flex justify-center mb-4 md:mb-6">
+            <div className="w-[85%] sm:w-[70%] md:w-[60%] lg:max-w-2xl">
               <img 
                 src="/logo.png" 
                 alt="PGL Solar - Powering a sustainable future" 
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-contain drop-shadow-2xl"
                 width={768}
-                height={768}
+                height={200}
               />
             </div>
           </div>
