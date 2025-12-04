@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Home, Building2, Store, Wrench, Check, ArrowRight } from "lucide-react";
+import { ContactDialog } from "./ContactDialog";
 import productResidential from "@/assets/product-residential.jpg";
 import productCommercial from "@/assets/product-commercial.jpg";
 import productFranchise from "@/assets/product-franchise.jpg";
@@ -27,6 +28,7 @@ interface Product {
 
 const ProductsSection = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   const products: Product[] = [
     {
@@ -144,8 +146,8 @@ const ProductsSection = () => {
     }
   ];
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  const openContactDialog = () => {
+    setContactDialogOpen(true);
   };
 
   return (
@@ -239,7 +241,7 @@ const ProductsSection = () => {
               <Button 
                 size="lg"
                 variant="secondary"
-                onClick={scrollToContact}
+                onClick={openContactDialog}
                 className="text-lg px-8 py-6"
               >
                 Start Your Solar Journey
@@ -318,7 +320,7 @@ const ProductsSection = () => {
                     <Button 
                       onClick={() => {
                         setSelectedProduct(null);
-                        scrollToContact();
+                        openContactDialog();
                       }}
                       className="flex-1 bg-gradient-hero hover:opacity-90"
                       size="lg"
@@ -339,6 +341,8 @@ const ProductsSection = () => {
             )}
           </DialogContent>
         </Dialog>
+        
+        <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
       </div>
     </section>
   );
