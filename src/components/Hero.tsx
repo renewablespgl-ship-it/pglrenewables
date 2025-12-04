@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { ContactDialog } from "./ContactDialog";
 
 const Hero = () => {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -49,7 +53,7 @@ const Hero = () => {
           <div className="flex justify-center items-center pt-2">
             <Button 
               size="lg" 
-              onClick={scrollToContact}
+              onClick={() => setContactDialogOpen(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-strong text-lg px-8 py-6 transition-all hover:scale-105"
             >
               Get Started Today
@@ -65,6 +69,8 @@ const Hero = () => {
           </button>
         </div>
       </div>
+      
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
     </section>
   );
 };
