@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { ContactDialog } from "./ContactDialog";
+import headerLogo from "@/assets/pgl-new-header-logo.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,8 +47,8 @@ const Header = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between py-1">
             <img 
-              src="/logo.png" 
-              alt="PGL Solar - Powering a sustainable future" 
+              src={headerLogo} 
+              alt="PGL Renewables - Powering a sustainable future" 
               className={`w-auto object-contain transition-all duration-300 ${
                 isScrolled 
                   ? 'h-20 md:h-22 lg:h-24' 
