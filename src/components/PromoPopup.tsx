@@ -95,7 +95,7 @@ export const PromoPopup = () => {
             <Button
               onClick={handleClose}
               variant="outline"
-              className="w-full py-3 sm:py-4 text-xs sm:text-sm rounded-lg sm:rounded-xl border-muted-foreground/30 text-muted-foreground hover:text-foreground hover:border-muted-foreground/50"
+              className="w-full py-3 sm:py-4 text-xs sm:text-sm rounded-lg sm:rounded-xl border-muted-foreground/30 text-muted-foreground hover:text-foreground hover:border-muted-foreground/50 hover:bg-muted/50 active:bg-muted/70"
             >
               Cancel
             </Button>
