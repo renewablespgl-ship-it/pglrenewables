@@ -41,7 +41,7 @@ const ProductsSection = () => {
         "FREE Documentation & Subsidy Process",
         "Monitoring Mobile App",
         "Loan & EMI Facility (All Government Banks)",
-        "Installation in 1 Day After Payment"
+        "Installation After 2-3 Days After Payment"
       ],
       badge: "Most Popular",
       badgeColor: "bg-primary",
