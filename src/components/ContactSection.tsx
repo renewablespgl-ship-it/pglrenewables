@@ -39,7 +39,7 @@ const ContactSection = () => {
                   <p className="text-muted-foreground">Years of Electrical Contracting Experience</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-secondary mb-2">5000+</div>
+                  <div className="text-3xl font-bold text-secondary mb-2">200+</div>
                   <p className="text-muted-foreground">Happy Customers</p>
                 </div>
                 <div>
