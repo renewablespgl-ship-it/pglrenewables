@@ -38,12 +38,9 @@ const Header = () => {
             const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
             window.scrollTo({ top: targetPosition, behavior: "smooth" });
             
-            // Add highlight animation
+            // Click the product card to open dialog after scroll
             setTimeout(() => {
-              element.classList.add('product-highlight');
-              setTimeout(() => {
-                element.classList.remove('product-highlight');
-              }, 1500);
+              element.click();
             }, 500);
           }
         });
@@ -70,14 +67,14 @@ const Header = () => {
     { label: "Franchise Opportunity", id: "franchise-opportunity" },
   ];
 
-  const scrollToProduct = (id: string) => {
-    // If not on home page, navigate to home with hash
+  const handleServiceClick = (id: string) => {
+    // If not on home page, navigate to home first, then scroll and click
     if (location.pathname !== "/") {
       navigate(`/#${id}`);
       return;
     }
     
-    // If on home page, just scroll using requestAnimationFrame to avoid forced reflow
+    // If on home page, scroll to product and click to open dialog
     requestAnimationFrame(() => {
       const element = document.getElementById(id);
       if (element) {
@@ -85,12 +82,9 @@ const Header = () => {
         const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
         window.scrollTo({ top: targetPosition, behavior: "smooth" });
         
-        // Add highlight animation after scroll completes
+        // Click the product card to open the dialog after scroll
         setTimeout(() => {
-          element.classList.add('product-highlight');
-          setTimeout(() => {
-            element.classList.remove('product-highlight');
-          }, 1500);
+          element.click();
         }, 500);
       }
     });
@@ -140,7 +134,7 @@ const Header = () => {
                             key={subItem.id + subItem.label}
                             onClick={() => {
                               setServicesDropdownOpen(false);
-                              scrollToProduct(subItem.id);
+                              handleServiceClick(subItem.id);
                             }}
                             className="block w-full text-left px-4 py-3 text-solar-navy hover:text-secondary hover:bg-secondary/5 transition-all duration-200 font-medium text-sm border-l-2 border-transparent hover:border-secondary mx-2 rounded-r-lg"
                           >
@@ -202,11 +196,11 @@ const Header = () => {
                         {servicesSubmenu.map((subItem) => (
                           <button
                             key={subItem.id + subItem.label}
-                            onClick={() => {
-                              setMobileMenuOpen(false);
-                              setMobileServicesOpen(false);
-                              scrollToProduct(subItem.id);
-                            }}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setMobileServicesOpen(false);
+                            handleServiceClick(subItem.id);
+                          }}
                             className="text-left px-3 py-1.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-xs"
                           >
                             {subItem.label}
