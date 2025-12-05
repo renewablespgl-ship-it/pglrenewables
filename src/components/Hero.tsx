@@ -40,6 +40,9 @@ const Hero = () => {
                 src={heroLogo} 
                 alt="PGL Renewables - Powering a sustainable future" 
                 className="w-full h-auto object-contain drop-shadow-2xl"
+                width={750}
+                height={230}
+                decoding="async"
               />
             </div>
           </div>
