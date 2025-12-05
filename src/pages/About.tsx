@@ -11,13 +11,13 @@ const About = () => {
   const features = [
     "400+ KW Installations Completed",
     "Residential: 3KW to 10KW & Above",
-    "Commercial / Industrial: 6KW to Megawatts",
+    "Commercial / Industrial: 5KW to Megawatts",
     "Dedicated Survey, Engineering, Installation & Service Teams",
     "FREE Site Survey & Bill Analysis",
     "Subsidy Letter & Pre-Approval Support",
     "Mobile App Monitoring for All Customers",
     "Emergency Service Support – Problem Solved in 1–2 Days",
-    "Installation Completed in 1 Day After Payment"
+    "Installation Completed in 2-3 Days After Payment"
   ];
 
   const brands = {
