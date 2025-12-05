@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
@@ -11,6 +12,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +23,31 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle scrolling to product after navigation
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash && location.pathname === "/") {
+      const id = hash.replace("#", "");
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const headerHeight = 100;
+          const targetPosition = element.offsetTop - headerHeight - 16;
+          window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          
+          // Add highlight animation
+          setTimeout(() => {
+            element.classList.add('product-highlight');
+            setTimeout(() => {
+              element.classList.remove('product-highlight');
+            }, 1500);
+          }, 500);
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -40,6 +69,13 @@ const Header = () => {
   ];
 
   const scrollToProduct = (id: string) => {
+    // If not on home page, navigate to home with hash
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+    
+    // If on home page, just scroll
     const element = document.getElementById(id);
     if (element) {
       const headerHeight = 100;
