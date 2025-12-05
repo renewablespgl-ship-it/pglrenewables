@@ -30,7 +30,7 @@ const Footer = () => {
               <Facebook className="h-5 w-5" />
             </a>
             <a
-              href="https://www.instagram.com/?hl=en"
+              href="https://www.instagram.com/pglrenewables/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
