@@ -72,30 +72,43 @@ const Header = () => {
     { label: "Franchise Opportunity", id: "franchise-opportunity" },
   ];
 
-  const handleServiceClick = (id: string) => {
-    // If not on home page, navigate to home first using direct URL to avoid hash encoding
-    if (location.pathname !== "/") {
-      window.location.href = `/#${id}`;
-      return;
-    }
-    
-    // If on home page, scroll to product and click to open dialog
+  const scrollToProduct = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // Batch all DOM reads together before any writes
       const scrollY = window.scrollY;
       const rect = element.getBoundingClientRect();
       const headerHeight = 100;
       const targetPosition = rect.top + scrollY - headerHeight - 16;
       
-      // Now perform the write operation
       window.scrollTo({ top: targetPosition, behavior: "smooth" });
       
-      // Click the product card to open the dialog after scroll
       setTimeout(() => {
         element.click();
       }, 500);
     }
+  };
+
+  const handleServiceClick = (id: string) => {
+    // If not on home page, navigate to home first
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      // Wait for navigation and lazy loading, then scroll
+      const checkAndScroll = (retries = 20) => {
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            scrollToProduct(id);
+          } else if (retries > 0) {
+            checkAndScroll(retries - 1);
+          }
+        }, 100);
+      };
+      checkAndScroll();
+      return;
+    }
+    
+    // If on home page, scroll to product and click to open dialog
+    scrollToProduct(id);
   };
 
   return (
