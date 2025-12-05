@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductsSection from "@/components/ProductsSection";
@@ -9,6 +9,8 @@ const Footer = lazy(() => import("@/components/Footer"));
 const PromoPopup = lazy(() => import("@/components/PromoPopup").then(m => ({ default: m.PromoPopup })));
 
 const Index = () => {
+  const [showPromo, setShowPromo] = useState(false);
+
   useEffect(() => {
     // Smooth scroll for anchor links with header offset
     const handleAnchorClick = (e: MouseEvent) => {
@@ -41,6 +43,14 @@ const Index = () => {
     return () => document.removeEventListener("click", handleAnchorClick);
   }, []);
 
+  // Defer PromoPopup loading until after initial paint to break critical request chain
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPromo(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -52,9 +62,11 @@ const Index = () => {
       <Suspense fallback={<div className="h-64 bg-background" />}>
         <Footer />
       </Suspense>
-      <Suspense fallback={null}>
-        <PromoPopup />
-      </Suspense>
+      {showPromo && (
+        <Suspense fallback={null}>
+          <PromoPopup />
+        </Suspense>
+      )}
     </div>
   );
 };
