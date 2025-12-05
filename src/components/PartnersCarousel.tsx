@@ -74,7 +74,10 @@ const PartnersCarousel = () => {
                     src={customer.image} 
                     alt={customer.name}
                     className="w-full h-64 object-cover"
+                    width={455}
+                    height={256}
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
