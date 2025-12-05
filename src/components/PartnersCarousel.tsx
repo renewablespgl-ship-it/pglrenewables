@@ -6,6 +6,8 @@ import customer7 from "@/assets/customer-7.jpg";
 import customer8 from "@/assets/customer-8.jpg";
 import customer9 from "@/assets/customer-9.jpg";
 import customer10 from "@/assets/customer-10.jpg";
+import customer11 from "@/assets/customer-11.jpg";
+import customer12 from "@/assets/customer-12.jpg";
 
 const PartnersCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -25,6 +27,8 @@ const PartnersCarousel = () => {
     { image: customer8, name: "Customer in Muppalla" },
     { image: customer9, name: "Customer in Chandralapadu" },
     { image: customer10, name: "N. Srinivasa Rao - Solar Installation" },
+    { image: customer11, name: "Customer in Muppalla" },
+    { image: customer12, name: "Customer in Nandigama" },
   ];
 
   useEffect(() => {
