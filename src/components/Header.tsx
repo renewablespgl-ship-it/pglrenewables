@@ -68,9 +68,9 @@ const Header = () => {
   ];
 
   const handleServiceClick = (id: string) => {
-    // If not on home page, navigate to home first, then scroll and click
+    // If not on home page, navigate to home first using direct URL to avoid hash encoding
     if (location.pathname !== "/") {
-      navigate(`/#${id}`);
+      window.location.href = `/#${id}`;
       return;
     }
     
