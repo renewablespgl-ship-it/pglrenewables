@@ -59,15 +59,17 @@ const Hero = () => {
             </Button>
           </div>
 
-          <button
-            onClick={scrollToContact}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-            aria-label="Scroll to contact"
-          >
-            <ArrowDown className="w-8 h-8 text-white" />
-          </button>
         </div>
       </div>
+
+      {/* Scroll Arrow - positioned relative to section */}
+      <button
+        onClick={scrollToContact}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce"
+        aria-label="Scroll to contact"
+      >
+        <ArrowDown className="w-8 h-8 text-white" />
+      </button>
       
       <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
     </section>
