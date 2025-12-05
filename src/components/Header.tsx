@@ -29,22 +29,27 @@ const Header = () => {
     const hash = location.hash;
     if (hash && location.pathname === "/") {
       const id = hash.replace("#", "");
-      // Small delay to ensure DOM is ready
-      setTimeout(() => {
-        requestAnimationFrame(() => {
-          const element = document.getElementById(id);
-          if (element) {
-            const headerHeight = 100;
-            const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
-            
-            // Click the product card to open dialog after scroll
-            setTimeout(() => {
-              element.click();
-            }, 500);
-          }
-        });
+      // Use setTimeout to let the DOM settle before measuring
+      const timeoutId = setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          // Batch all DOM reads together before any writes
+          const scrollY = window.scrollY;
+          const rect = element.getBoundingClientRect();
+          const headerHeight = 100;
+          const targetPosition = rect.top + scrollY - headerHeight - 16;
+          
+          // Now perform the write operation
+          window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          
+          // Click the product card to open dialog after scroll
+          setTimeout(() => {
+            element.click();
+          }, 500);
+        }
       }, 100);
+      
+      return () => clearTimeout(timeoutId);
     }
   }, [location]);
 
@@ -75,19 +80,22 @@ const Header = () => {
     }
     
     // If on home page, scroll to product and click to open dialog
-    requestAnimationFrame(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        const headerHeight = 100;
-        const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-        window.scrollTo({ top: targetPosition, behavior: "smooth" });
-        
-        // Click the product card to open the dialog after scroll
-        setTimeout(() => {
-          element.click();
-        }, 500);
-      }
-    });
+    const element = document.getElementById(id);
+    if (element) {
+      // Batch all DOM reads together before any writes
+      const scrollY = window.scrollY;
+      const rect = element.getBoundingClientRect();
+      const headerHeight = 100;
+      const targetPosition = rect.top + scrollY - headerHeight - 16;
+      
+      // Now perform the write operation
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      
+      // Click the product card to open the dialog after scroll
+      setTimeout(() => {
+        element.click();
+      }, 500);
+    }
   };
 
   return (
