@@ -61,7 +61,7 @@ const About = () => {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                   {features.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/15 transition-all duration-200">
+                    <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/15 transition-all duration-200">
                       <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
                       <span className="text-white text-base md:text-lg">{feature}</span>
                     </div>
