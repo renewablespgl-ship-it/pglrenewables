@@ -91,9 +91,10 @@ const Header = () => {
   const handleServiceClick = (id: string) => {
     // If not on home page, navigate to home first
     if (location.pathname !== "/") {
-      navigate(`/#${id}`);
+      // Navigate to home, then set hash after navigation
+      navigate("/");
       // Wait for navigation and lazy loading, then scroll
-      const checkAndScroll = (retries = 20) => {
+      const checkAndScroll = (retries = 30) => {
         setTimeout(() => {
           const element = document.getElementById(id);
           if (element) {
