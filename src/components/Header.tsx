@@ -190,7 +190,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden text-solar-navy hover:text-secondary"
+              className="md:hidden text-solar-navy hover:text-secondary hover:bg-muted/50 active:bg-muted/70"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X /> : <Menu />}
