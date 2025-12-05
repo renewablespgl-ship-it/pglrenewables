@@ -100,9 +100,9 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white shadow-md'
-      } py-0`}>
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-1">
+      }`}>
+        <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-0.5 sm:py-1">
             <img 
               src={headerLogo} 
               alt="PGL Renewables - Powering a sustainable future" 
@@ -187,18 +187,22 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3">
+            <nav className="md:hidden mt-2 pb-3 flex flex-col gap-1.5 border-t border-gray-100 pt-2">
               {navItems.map((item) => (
                 item.label === "Services" ? (
                   <div key={item.path}>
                     <button
                       onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                      className="w-full text-left px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium"
+                      className="w-full text-left px-3 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm flex items-center justify-between"
                     >
                       {item.label}
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                      />
                     </button>
                     {mobileServicesOpen && (
-                      <div className="ml-4 mt-1 flex flex-col gap-1 animate-in slide-in-from-top-2 duration-200">
+                      <div className="ml-3 mt-1 flex flex-col gap-0.5 animate-in slide-in-from-top-2 duration-200 bg-gray-50 rounded-lg py-1">
                         {servicesSubmenu.map((subItem) => (
                           <button
                             key={subItem.id + subItem.label}
@@ -207,7 +211,7 @@ const Header = () => {
                               setMobileServicesOpen(false);
                               scrollToProduct(subItem.id);
                             }}
-                            className="text-left px-4 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm"
+                            className="text-left px-3 py-1.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-xs"
                           >
                             {subItem.label}
                           </button>
@@ -219,7 +223,7 @@ const Header = () => {
                   <NavLink
                     key={item.path}
                     to={item.path}
-                    className="px-4 py-2.5 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium active:bg-secondary/10"
+                    className="px-3 py-2 text-solar-navy hover:text-secondary transition-all duration-200 rounded-lg hover:bg-secondary/5 font-medium text-sm active:bg-secondary/10"
                     activeClassName="text-secondary font-semibold bg-secondary/10"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -229,7 +233,7 @@ const Header = () => {
               ))}
               <Button
                 onClick={handleContactClick}
-                className="px-4 py-2.5 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+                className="mx-3 mt-1 px-3 py-2 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 text-sm"
                 variant="default"
               >
                 Contact
