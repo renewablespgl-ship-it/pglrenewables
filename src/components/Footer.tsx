@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.facebook.com/profile.php?id=61583279493428"
+              href="https://www.facebook.com/profile.php?id=61584561877245"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
