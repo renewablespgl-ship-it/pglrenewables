@@ -13,6 +13,8 @@ const Footer = () => {
               className="h-28 w-auto"
               width={112}
               height={112}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
