@@ -45,6 +45,14 @@ const Header = () => {
       const headerHeight = 100;
       const targetPosition = element.offsetTop - headerHeight - 16;
       window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      
+      // Add highlight animation after scroll completes
+      setTimeout(() => {
+        element.classList.add('product-highlight');
+        setTimeout(() => {
+          element.classList.remove('product-highlight');
+        }, 1500);
+      }, 500);
     }
   };
 
