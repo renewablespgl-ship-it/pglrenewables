@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 
-// Lazy load PromoPopup since it only appears after 1 second delay
+// Lazy load components below the fold
+const Footer = lazy(() => import("@/components/Footer"));
 const PromoPopup = lazy(() => import("@/components/PromoPopup").then(m => ({ default: m.PromoPopup })));
 
 const Index = () => {
@@ -49,7 +49,9 @@ const Index = () => {
         <ProductsSection />
         <ContactSection />
       </main>
-      <Footer />
+      <Suspense fallback={<div className="h-64 bg-background" />}>
+        <Footer />
+      </Suspense>
       <Suspense fallback={null}>
         <PromoPopup />
       </Suspense>
