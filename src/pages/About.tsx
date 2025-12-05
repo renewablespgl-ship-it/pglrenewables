@@ -22,8 +22,8 @@ const About = () => {
 
   const brands = {
     "Solar Panels": "Waaree | Tata | Adani | Rayzon",
-    "Inverters": "Waaree | Polycab | AD PV",
-    "Cables": "Polycab"
+    "Inverters": "Waaree | Polycab",
+    "Cables": "Polycab | Finolex"
   };
 
   return (
@@ -82,7 +82,9 @@ const About = () => {
                     "ISO Certified",
                     "Udyam & Startup India Registered",
                     "Eastern Power Vendor Licence",
-                    "GST Compliant"
+                    "GST Compliant",
+                    "Nredcap Approved",
+                    "APCPDCL, APEPDCL & APSPDCL Vendor"
                   ].map((cert, index) => (
                     <div key={index} className="flex items-center gap-3 bg-secondary/5 rounded-lg p-4 border border-secondary/20">
                       <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
