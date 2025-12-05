@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { ContactDialog } from "./ContactDialog";
+import heroLogo from "@/assets/pgl-hero-logo-new.jpg";
 
 const Hero = () => {
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
@@ -34,12 +35,12 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto space-y-2 animate-fade-in">
           {/* Large Logo */}
           <div className="flex justify-center mb-4 md:mb-6">
-            <div className="w-[85%] sm:w-[70%] md:w-[60%] lg:max-w-2xl">
+            <div className="w-[90%] max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[650px] xl:max-w-[750px]">
               <img 
-                src="/logo.png" 
-                alt="PGL Solar - Powering a sustainable future" 
+                src={heroLogo} 
+                alt="PGL Renewables - Powering a sustainable future" 
                 className="w-full h-auto object-contain drop-shadow-2xl"
-                width={768}
+                width={750}
                 height={200}
               />
             </div>
