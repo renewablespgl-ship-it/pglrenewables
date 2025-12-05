@@ -61,7 +61,7 @@ const ProductsSection = () => {
     },
     {
       title: "Commercial Solar",
-      description: "360° Solar Solution for businesses - from 6KW to Megawatts. Power schools, hospitals, factories, offices, and more with sustainable energy.",
+      description: "360° Solar Solution for businesses - from 5KW to Megawatts. Power schools, hospitals, factories, offices, and more with sustainable energy.",
       image: productCommercial,
       icon: Building2,
       features: [
@@ -69,15 +69,15 @@ const ProductsSection = () => {
         "FREE Bill Analysis & ROI Report",
         "1-Year FREE AMC (Service & Maintenance)",
         "Solar Insurance Available (Optional)",
-        "Capacity: 6KW to Megawatts"
+        "Capacity: 5KW to Megawatts"
       ],
       badge: "For Business",
       badgeColor: "bg-secondary",
       pricing: {
-        starting: "₹4.50 Lakh",
-        typical: "₹4.50L - Multiple Crores",
+        starting: "₹2.70 Lakh",
+        typical: "₹2.70L - Multiple Crores",
         details: [
-          "Scalable from 6KW to Megawatts",
+          "Scalable from 5KW to Megawatts",
           "ROI: 2 to 3.5 Years",
           "1-Year FREE AMC Included",
           "Commercial tax benefits & subsidies",
@@ -85,7 +85,7 @@ const ProductsSection = () => {
           "Solar Insurance Available (Optional)"
         ]
       },
-      detailedInfo: "🏭 Complete 360° Solar Solution for Commercial & Industrial needs. We serve Schools & Colleges 🏫, Hospitals & Clinics 🏥, Shops & Restaurants 🏬, Factories & Industries 🏭, Corporate Offices 🏢, and Cold Storages 🏪. Our comprehensive service includes FREE Shadow Analysis with 3D Structural Report, FREE Bill Analysis & ROI Report showing 2 to 3.5 years payback period. Every installation comes with 1-Year FREE AMC covering service and maintenance. Solar Insurance available as optional coverage. From 6KW systems to multi-megawatt installations, we handle turnkey project management with dedicated engineering and support teams."
+      detailedInfo: "🏭 Complete 360° Solar Solution for Commercial & Industrial needs. We serve Schools & Colleges 🏫, Hospitals & Clinics 🏥, Shops & Restaurants 🏬, Factories & Industries 🏭, Corporate Offices 🏢, and Cold Storages 🏪. Our comprehensive service includes FREE Shadow Analysis with 3D Structural Report, FREE Bill Analysis & ROI Report showing 2 to 3.5 years payback period. Every installation comes with 1-Year FREE AMC covering service and maintenance. Solar Insurance available as optional coverage. From 5KW systems to multi-megawatt installations, we handle turnkey project management with dedicated engineering and support teams."
     },
     {
       title: "Franchise Opportunity",
