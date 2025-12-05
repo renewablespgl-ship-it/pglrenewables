@@ -1,10 +1,10 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ProductsSection from "@/components/ProductsSection";
-import ContactSection from "@/components/ContactSection";
 
-// Lazy load components below the fold
+// Lazy load components below the fold to reduce unused JavaScript
+const ProductsSection = lazy(() => import("@/components/ProductsSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 const PromoPopup = lazy(() => import("@/components/PromoPopup").then(m => ({ default: m.PromoPopup })));
 
@@ -56,8 +56,12 @@ const Index = () => {
       <Header />
       <main className="pt-[60px] md:pt-[70px] lg:pt-[80px]">
         <Hero />
-        <ProductsSection />
-        <ContactSection />
+        <Suspense fallback={<div className="min-h-[400px] bg-background" />}>
+          <ProductsSection />
+        </Suspense>
+        <Suspense fallback={<div className="min-h-[400px] bg-background" />}>
+          <ContactSection />
+        </Suspense>
       </main>
       <Suspense fallback={<div className="h-64 bg-background" />}>
         <Footer />
