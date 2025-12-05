@@ -30,7 +30,7 @@ const About = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
-        <section className="py-16 md:py-20 bg-gradient-to-b from-solar-navy/5 to-background">
+        <section className="pt-6 md:pt-8 pb-16 md:pb-20 bg-gradient-to-b from-solar-navy/5 to-background">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               {/* Header */}
