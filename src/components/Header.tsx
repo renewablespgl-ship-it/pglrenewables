@@ -102,7 +102,7 @@ const Header = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white shadow-md'
       }`}>
         <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-0.5 sm:py-1">
+          <div className="flex items-center justify-between py-3 max-[600px]:py-3 sm:py-1">
             <img 
               src={headerLogo} 
               alt="PGL Renewables - Powering a sustainable future" 
