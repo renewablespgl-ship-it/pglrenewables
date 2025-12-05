@@ -106,13 +106,13 @@ const Header = () => {
             <img 
               src={headerLogo} 
               alt="PGL Renewables - Powering a sustainable future" 
-              className={`w-auto object-contain transition-all duration-300 ${
+              className={`h-auto object-contain transition-all duration-300 ${
                 isScrolled 
-                  ? 'h-20 md:h-22 lg:h-24' 
-                  : 'h-24 md:h-28 lg:h-32'
+                  ? 'w-[100px] sm:w-[130px] md:w-[160px] lg:w-[200px]' 
+                  : 'w-[120px] sm:w-[160px] md:w-[200px] lg:w-[240px]'
               }`}
-              width={128}
-              height={128}
+              width={240}
+              height={74}
               loading="eager"
             />
 
