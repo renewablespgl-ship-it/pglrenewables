@@ -8,7 +8,11 @@ export const PromoPopup = () => {
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   useEffect(() => {
-    // Show popup 1 second after page load on every visit
+    // Check if popup was already shown this session
+    const hasSeenPopup = localStorage.getItem('pgl_popup_shown');
+    if (hasSeenPopup) return;
+
+    // Show popup 1 second after page load
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 1000);
@@ -16,6 +20,7 @@ export const PromoPopup = () => {
   }, []);
 
   const handleClose = () => {
+    localStorage.setItem('pgl_popup_shown', 'true');
     setIsOpen(false);
   };
 
