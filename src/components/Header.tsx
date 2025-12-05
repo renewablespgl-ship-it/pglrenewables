@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { ContactDialog } from "./ContactDialog";
-import headerLogo from "@/assets/pgl-new-header-logo.png";
+import headerLogo from "@/assets/pgl-header-logo.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
