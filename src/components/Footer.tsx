@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="text-center space-y-2">
-            <p className="text-white/90">Email: info@pglsolar.co.in</p>
+            <p className="text-white/90">Email: info@pglrenewables.com</p>
             <p className="text-white/90">Phone: 6303161129</p>
             <p className="text-white/70 text-sm">Available 24/7 for solar emergencies</p>
           </div>
