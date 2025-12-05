@@ -24,13 +24,16 @@ const Index = () => {
       if (!targetElement) return;
 
       e.preventDefault();
-      const header = document.querySelector("header");
-      const headerHeight = header?.offsetHeight || 100;
-      const targetPosition = targetElement.offsetTop - headerHeight - 16;
+      
+      // Use requestAnimationFrame to batch DOM reads and avoid forced reflow
+      requestAnimationFrame(() => {
+        const headerHeight = 100; // Use fixed value to avoid DOM measurement
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
       });
     };
 

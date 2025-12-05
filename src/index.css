@@ -163,4 +163,14 @@ All colors MUST be HSL.
       transform: scale(1);
     }
   }
+
+  /* Optimize carousel for better performance - reduce reflow */
+  .embla__viewport {
+    contain: layout style;
+  }
+  
+  .embla__container {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
 }

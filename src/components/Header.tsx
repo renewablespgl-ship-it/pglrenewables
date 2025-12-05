@@ -31,20 +31,22 @@ const Header = () => {
       const id = hash.replace("#", "");
       // Small delay to ensure DOM is ready
       setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          const headerHeight = 100;
-          const targetPosition = element.offsetTop - headerHeight - 16;
-          window.scrollTo({ top: targetPosition, behavior: "smooth" });
-          
-          // Add highlight animation
-          setTimeout(() => {
-            element.classList.add('product-highlight');
+        requestAnimationFrame(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            const headerHeight = 100;
+            const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+            
+            // Add highlight animation
             setTimeout(() => {
-              element.classList.remove('product-highlight');
-            }, 1500);
-          }, 500);
-        }
+              element.classList.add('product-highlight');
+              setTimeout(() => {
+                element.classList.remove('product-highlight');
+              }, 1500);
+            }, 500);
+          }
+        });
       }, 100);
     }
   }, [location]);
@@ -75,21 +77,23 @@ const Header = () => {
       return;
     }
     
-    // If on home page, just scroll
-    const element = document.getElementById(id);
-    if (element) {
-      const headerHeight = 100;
-      const targetPosition = element.offsetTop - headerHeight - 16;
-      window.scrollTo({ top: targetPosition, behavior: "smooth" });
-      
-      // Add highlight animation after scroll completes
-      setTimeout(() => {
-        element.classList.add('product-highlight');
+    // If on home page, just scroll using requestAnimationFrame to avoid forced reflow
+    requestAnimationFrame(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const headerHeight = 100;
+        const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+        
+        // Add highlight animation after scroll completes
         setTimeout(() => {
-          element.classList.remove('product-highlight');
-        }, 1500);
-      }, 500);
-    }
+          element.classList.add('product-highlight');
+          setTimeout(() => {
+            element.classList.remove('product-highlight');
+          }, 1500);
+        }, 500);
+      }
+    });
   };
 
   return (
