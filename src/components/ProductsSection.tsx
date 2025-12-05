@@ -151,7 +151,7 @@ const ProductsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section id="products" className="py-20 bg-background scroll-mt-32">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
