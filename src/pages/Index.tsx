@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
@@ -53,6 +54,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh</title>
+        <meta name="description" content="Expert solar installation with 400+ KW completed. Free site survey, subsidy support & 2-3 day installation. Switch to solar today!" />
+        <link rel="canonical" href="https://pglrenewables.com/" />
+        <meta property="og:title" content="PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh" />
+        <meta property="og:description" content="Expert solar installation with 400+ KW completed. Free site survey, subsidy support & 2-3 day installation. Switch to solar today!" />
+        <meta property="og:url" content="https://pglrenewables.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
+      </Helmet>
       <Header />
       <main className="pt-[60px] md:pt-[70px] lg:pt-[80px]">
         <Hero />
