@@ -19,6 +19,8 @@ const Blog = () => {
         <meta property="og:url" content="https://pglrenewables.com/blog" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
+        <meta name="twitter:title" content="Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog" />
+        <meta name="twitter:description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
       </Helmet>
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
