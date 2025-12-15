@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -9,6 +10,16 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog</title>
+        <meta name="description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <link rel="canonical" href="https://pglrenewables.com/blog" />
+        <meta property="og:title" content="Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog" />
+        <meta property="og:description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <meta property="og:url" content="https://pglrenewables.com/blog" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
+      </Helmet>
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
         <section className="pt-6 md:pt-8 pb-16 md:pb-20 bg-gradient-to-b from-solar-navy/5 to-background">
