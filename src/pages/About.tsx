@@ -38,6 +38,8 @@ const About = () => {
         <meta property="og:url" content="https://pglrenewables.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
+        <meta name="twitter:title" content="About PGL Solar - 25+ Years Experience | Trusted Solar EPC Company" />
+        <meta name="twitter:description" content="PGL Solar: 25+ years electrical experience, 400+ KW installations, APCPDCL licensed. Complete EPC services from survey to monitoring." />
       </Helmet>
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">

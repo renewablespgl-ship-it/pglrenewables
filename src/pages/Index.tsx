@@ -63,6 +63,8 @@ const Index = () => {
         <meta property="og:url" content="https://pglrenewables.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
+        <meta name="twitter:title" content="PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh" />
+        <meta name="twitter:description" content="Expert solar installation with 400+ KW completed. Free site survey, subsidy support & 2-3 day installation. Switch to solar today!" />
       </Helmet>
       <Header />
       <main className="pt-[60px] md:pt-[70px] lg:pt-[80px]">
