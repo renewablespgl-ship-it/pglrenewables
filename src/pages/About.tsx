@@ -82,7 +82,7 @@ const About = () => {
                     "ISO Certified",
                     "Udyam & Startup India Registered",
                     "Eastern Power Vendor Licence",
-                    "GST Compliant",
+                    "GST Compliance",
                     "Nredcap Approved",
                     "APCPDCL, APEPDCL & APSPDCL Vendor"
                   ].map((cert, index) => (
