@@ -28,9 +28,11 @@
     <meta name="twitter:image" content="https://pglrenewables.com/og-cover.png" />
 
     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
 
@@ -50,7 +52,13 @@
       "@type": "Organization",
       "name": "PGL Renewables",
       "url": "https://pglrenewables.com",
-      "logo": "https://pglrenewables.com/favicon.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pglrenewables.com/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61584561877245",
         "https://www.instagram.com/pglrenewables/?hl=en",
