@@ -57,6 +57,7 @@ const Index = () => {
       <Helmet>
         <title>PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh</title>
         <meta name="description" content="Expert solar installation with 400+ KW completed. Free site survey, subsidy support & 2-3 day installation. Switch to solar today!" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pglrenewables.com/" />
         <meta property="og:title" content="PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh" />
         <meta property="og:description" content="Expert solar installation with 400+ KW completed. Free site survey, subsidy support & 2-3 day installation. Switch to solar today!" />

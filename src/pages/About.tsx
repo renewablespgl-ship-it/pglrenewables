@@ -32,6 +32,7 @@ const About = () => {
       <Helmet>
         <title>About PGL Solar - 25+ Years Experience | Trusted Solar EPC Company</title>
         <meta name="description" content="PGL Solar: 25+ years electrical experience, 400+ KW installations, APCPDCL licensed. Complete EPC services from survey to monitoring. Your trusted solar partner in Andhra Pradesh." />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pglrenewables.com/about" />
         <meta property="og:title" content="About PGL Solar - 25+ Years Experience | Trusted Solar EPC Company" />
         <meta property="og:description" content="PGL Solar: 25+ years electrical experience, 400+ KW installations, APCPDCL licensed. Complete EPC services from survey to monitoring." />

@@ -13,6 +13,7 @@ const Blog = () => {
       <Helmet>
         <title>Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog</title>
         <meta name="description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pglrenewables.com/blog" />
         <meta property="og:title" content="Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog" />
         <meta property="og:description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
