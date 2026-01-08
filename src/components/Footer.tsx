@@ -54,7 +54,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://youtube.com/@pglrenewables-323?si=l-uVnzYVyRivJrYx"
+              href="https://www.youtube.com/channel/UCw9vUP9zeHYzoaWyTLqOg_A"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
