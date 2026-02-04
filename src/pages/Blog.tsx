@@ -11,17 +11,17 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog</title>
-        <meta name="description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <title>Why Solar Energy Is the Smartest Investment in 2026 | PGL Solar Blog</title>
+        <meta name="description" content="Discover why solar power is India's smartest investment in 2026. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pglrenewables.com/blog" />
-        <meta property="og:title" content="Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog" />
-        <meta property="og:description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <meta property="og:title" content="Why Solar Energy Is the Smartest Investment in 2026 | PGL Solar Blog" />
+        <meta property="og:description" content="Discover why solar power is India's smartest investment in 2026. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
         <meta property="og:url" content="https://pglrenewables.com/blog" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
-        <meta name="twitter:title" content="Why Solar Energy Is the Smartest Investment in 2025 | PGL Solar Blog" />
-        <meta name="twitter:description" content="Discover why solar power is India's smartest investment in 2025. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <meta name="twitter:title" content="Why Solar Energy Is the Smartest Investment in 2026 | PGL Solar Blog" />
+        <meta name="twitter:description" content="Discover why solar power is India's smartest investment in 2026. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
       </Helmet>
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
@@ -31,7 +31,7 @@ const Blog = () => {
               {/* Header */}
               <div className="text-center mb-12 md:mb-16">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-solar-navy mb-4 md:mb-6 leading-tight">
-                  Why Solar Energy Is the Smartest Investment in 2025 – PGL Solar Blog
+                  Why Solar Energy Is the Smartest Investment in 2026 – PGL Solar Blog
                 </h1>
                 <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
               </div>
@@ -39,7 +39,7 @@ const Blog = () => {
               {/* Section 1 */}
               <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 lg:p-12 mb-6 md:mb-8 border border-secondary/10">
                 <h2 className="text-2xl md:text-3xl font-semibold text-solar-navy mb-6">
-                  Top Reasons Why Solar Power Is the Smartest Investment for Homes & Businesses in 2025
+                  Top Reasons Why Solar Power Is the Smartest Investment for Homes & Businesses in 2026
                 </h2>
                 <p className="text-lg text-solar-navy/90 leading-relaxed">
                   Solar energy is growing rapidly in India as electricity prices continue to rise. With strong government support, subsidies, and an increasing need for clean energy, solar power has become the most reliable and cost-effective solution for homes, businesses, and industries.
