@@ -22,6 +22,18 @@ const Blog = () => {
         <meta property="og:image" content="https://pglrenewables.com/og-cover.png" />
         <meta name="twitter:title" content="Why Solar Energy Is the Smartest Investment in 2026 | PGL Solar Blog" />
         <meta name="twitter:description" content="Discover why solar power is India's smartest investment in 2026. Learn about government subsidies, ROI, bill savings & why PGL Solar is your trusted partner." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Why Solar Energy Is the Smartest Investment in 2026",
+          "description": "Discover why solar power is India's smartest investment in 2026. Learn about government subsidies, ROI, bill savings.",
+          "author": { "@type": "Organization", "name": "PGL Renewables", "url": "https://pglrenewables.com" },
+          "publisher": { "@type": "Organization", "name": "PGL Renewables", "logo": { "@type": "ImageObject", "url": "https://pglrenewables.com/logo.png" } },
+          "datePublished": "2026-01-15",
+          "dateModified": "2026-02-07",
+          "image": "https://pglrenewables.com/og-cover.png",
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://pglrenewables.com/blog" }
+        })}</script>
       </Helmet>
       <Header />
       <main className="pt-[96px] md:pt-[108px] lg:pt-[124px]">
