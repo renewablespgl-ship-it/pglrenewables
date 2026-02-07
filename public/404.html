@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>PGL Solar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PGL Renewables - Clean Energy Solutions | Solar Power Systems</title>
+    <meta name="description" content="PGL Renewables provides premium solar solutions for homes and businesses. Reduce electricity bills, save energy & switch to clean solar power today." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.ico">
+    <link rel="canonical" href="https://pglrenewables.com" />
     <script>
-      // Single Page App redirect for GitHub Pages / static hosting
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      // SPA redirect for GitHub Pages - preserves the URL path
+      // This only triggers for routes NOT handled by pre-built HTML files
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        // Store the intended path and redirect to root
+        sessionStorage.redirect = path + search + hash;
+        window.location.replace('/' + search + hash);
+      })();
     </script>
   </head>
   <body>
+    <noscript>
+      <div style="max-width:800px;margin:40px auto;padding:0 20px;font-family:sans-serif">
+        <h1>PGL Renewables - Your Trusted Solar Partner</h1>
+        <p>Looking for something? Visit our <a href="/">homepage</a>, <a href="/about">about page</a>, or <a href="/blog">blog</a>.</p>
+      </div>
+    </noscript>
   </body>
 </html>
