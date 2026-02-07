@@ -33,6 +33,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create SPA route files for GitHub Pages
+        run: |
+          # Create directories and copy index.html for each SPA route
+          # This ensures GitHub Pages returns 200 (not 404) for these routes
+          mkdir -p dist/about
+          cp dist/index.html dist/about/index.html
+          mkdir -p dist/blog
+          cp dist/index.html dist/blog/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
