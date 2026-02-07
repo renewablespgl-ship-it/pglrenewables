@@ -111,6 +111,47 @@
       ]
     }
     </script>
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PGL Renewables",
+      "image": "https://pglrenewables.com/logo.png",
+      "url": "https://pglrenewables.com",
+      "telephone": "+91-6303161129",
+      "email": "info@pglrenewables.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹",
+      "description": "PGL Solar provides premium solar installation services for homes and businesses in Andhra Pradesh. 25+ years experience, 400+ KW installations completed.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Solar Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Solar Installation",
+              "description": "Rooftop solar systems from 3KW to 10KW and above for homes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Solar Installation",
+              "description": "Solar systems from 5KW to Megawatts for businesses and industries"
+            }
+          }
+        ]
+      }
+    }
   </head>
 
   <body>
@@ -125,6 +166,31 @@
       })();
     </script>
     <div id="root"></div>
+    <noscript>
+      <div style="max-width:800px;margin:40px auto;padding:0 20px;font-family:sans-serif">
+        <h1>PGL Renewables - Your Trusted Solar Partner in Andhra Pradesh</h1>
+        <p>PGL Solar provides premium solar solutions for homes and businesses across Andhra Pradesh. With 25+ years of electrical contracting experience and 400+ KW installations completed, we are your trusted EPC solar partner.</p>
+        <h2>Our Services</h2>
+        <ul>
+          <li>Residential Solar Systems (3KW to 10KW & Above)</li>
+          <li>Commercial & Industrial Solar (5KW to Megawatts)</li>
+          <li>Solar Panel Maintenance & Support</li>
+          <li>Subsidy & Documentation Support</li>
+        </ul>
+        <h2>Why Choose PGL Solar?</h2>
+        <ul>
+          <li>FREE Site Survey & Bill Analysis</li>
+          <li>Installation Completed in 2-3 Days</li>
+          <li>Mobile App Monitoring for All Customers</li>
+          <li>Emergency Service Support – Problem Solved in 1-2 Days</li>
+        </ul>
+        <p>Contact us: <a href="tel:+916303161129">+91-6303161129</a> | <a href="mailto:info@pglrenewables.com">info@pglrenewables.com</a></p>
+        <nav>
+          <a href="/about">About Us</a> |
+          <a href="/blog">Blog</a>
+        </nav>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
   </body>
 </html>
