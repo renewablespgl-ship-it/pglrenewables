@@ -17,7 +17,7 @@ const PartnersCarousel = () => {
     containScroll: "trimSnaps",
   });
   
-  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   const customers = [
