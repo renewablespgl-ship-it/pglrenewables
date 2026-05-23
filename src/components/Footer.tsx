@@ -45,7 +45,7 @@ const Footer = () => {
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="https://www.linkedin.com/company/pgl-solar"
+              href="https://www.linkedin.com/company/pgl-renewables/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 hover:bg-secondary transition-all"
