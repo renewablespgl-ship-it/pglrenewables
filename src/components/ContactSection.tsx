@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sun } from "lucide-react";
-import PartnersCarousel from "./PartnersCarousel";
 
 const ContactSection = () => {
 
@@ -24,9 +23,6 @@ const ContactSection = () => {
             </p>
           </div>
         </div>
-
-        {/* Customer Images Carousel */}
-        <PartnersCarousel />
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
