@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 
 // Lazy load components below the fold to reduce unused JavaScript
 const ProductsSection = lazy(() => import("@/components/ProductsSection"));
+const FAQSection = lazy(() => import("@/components/FAQSection"));
 const FieldOperationsSection = lazy(() => import("@/components/FieldOperationsSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Footer = lazy(() => import("@/components/Footer"));
