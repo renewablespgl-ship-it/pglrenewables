@@ -76,6 +76,9 @@ const Index = () => {
           <ProductsSection />
         </Suspense>
         <Suspense fallback={<div className="min-h-[400px] bg-background" />}>
+          <FAQSection />
+        </Suspense>
+        <Suspense fallback={<div className="min-h-[400px] bg-background" />}>
           <FieldOperationsSection />
         </Suspense>
         <Suspense fallback={<div className="min-h-[400px] bg-background" />}>
